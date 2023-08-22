@@ -31,3 +31,11 @@ console.log(Math.random());
 console.log(Math.floor(Math.random() * 10 + 1)); // num create within (1-10)
 console.log(Math.floor(Math.random() * 100)); // num create within (0-100)
 console.log(Math.round(Math.random() * 1000 + 1)); // num create within (1-1000)
+
+//
+//
+const splitted = "jobayer";
+const res = splitted.split("").reverse().join("");
+console.log(res);
+
+console.log(0xff);
