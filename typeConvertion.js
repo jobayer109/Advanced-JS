@@ -70,14 +70,6 @@ let b3 = +b2; // NaN
 //      undefined	            NaN	                "undefined"	                    false
 //      ["twenty"]	            NaN	                "twenty"	                    true
 //      ["ten","twenty"]	    NaN	                "ten,twenty"	                true
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+const test = null;
+console.log(String(test));
