@@ -24,3 +24,10 @@ console.log(Math.pow(3, 3)); // 27
 console.log(Math.sqrt(64)); // 8
 
 console.log(Math.sqrt(9)); // 3
+
+//
+// Math.random
+console.log(Math.random());
+console.log(Math.floor(Math.random() * 10 + 1)); // num create within (1-10)
+console.log(Math.floor(Math.random() * 100)); // num create within (0-100)
+console.log(Math.round(Math.random() * 1000 + 1)); // num create within (1-1000)
