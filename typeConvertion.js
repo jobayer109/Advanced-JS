@@ -38,13 +38,13 @@ let b2 = "aaa";
 let b3 = +b2; // NaN
 //
 //
-//
-// Notes:
-// Convert Dates to Numbers
-// Convert Dates to Strings
-// Convert Booleans to Numbers
-// Convert Booleans to Strings
-//
+/*
+    Notes:
+    Convert Dates to Numbers
+    Convert Dates to Strings
+    Convert Booleans to Numbers
+    Convert Booleans to Strings
+*/
 //
 // Automatic Type Conversion:
 5 + null; // returns 5              because null is converted to 0
@@ -53,23 +53,26 @@ let b3 = +b2; // NaN
 "5" - 2; // returns 3               because "5" is converted to 5
 "5" * "2"; // returns 10            because "5" and "2" are converted to 5 and 2
 
-//JavaScript Type Conversion Table:
-//
-//  OriginalValue	         to Number	             to String	               to Boolean
-//      "0"	                    0	                    "0"	                        true
-//      "000"	                0	                    "000"	                    true
-//      NaN	                    NaN	                    "NaN"	                    false
-//      Infinity	        Infinity	               "Infinity"	                true
-//      -Infinity	        -Infinity	               "-Infinity"	                true
-//      ""	                    0	                    ""	                        false
-//      [ ]	                    0	                    ""	                        true
-//      [20]	                20	                    "20"	                    true
-//      function(){}	        NaN	                "function(){}"	                true
-//      { }	                    NaN	                "[object Object]"	            true
-//      null	                0	                "null"	                        false
-//      undefined	            NaN	                "undefined"	                    false
-//      ["twenty"]	            NaN	                "twenty"	                    true
-//      ["ten","twenty"]	    NaN	                "ten,twenty"	                true
+/*
+JavaScript Type Conversion Table:
+
+ OriginalValue	         to Number	             to String	               to Boolean
+     "0"	                 0	                    "0"	                        true
+     "000"	                0	                    "000"	                    true
+     NaN	                NaN	                    "NaN"	                    false
+     Infinity	        Infinity	               "Infinity"	                true
+     -Infinity	        -Infinity	               "-Infinity"	                true
+     ""	                    0	                    ""	                        false
+     [ ]	                  0	                    ""	                        true
+     [20]	                20	                    "20"	                    true
+     function(){}	        NaN	                "function(){}"	                true
+     { }	                NaN	                "[object Object]"	            true
+     null	                0	                "null"	                        false
+     undefined	            NaN	                "undefined"	                    false
+     ["twenty"]	            NaN	                "twenty"	                    true
+     ["ten","twenty"]	    NaN	                "ten,twenty"	                true
+
+*/
 
 const test = null;
 console.log(String(test));

@@ -18,11 +18,14 @@ console.log(date.getSeconds()); // 45
 const date1 = new Date(2023, 7, 22, 20, 65, 39, 0);
 console.log(date1.toDateString());
 console.log(date1.toTimeString());
+
 //
 //
 //
-// You cannot omit month. If you supply only one parameter it will be treated as milliseconds.
-// You should use at least 2 parameter, otherwise return ms.
+/*
+You cannot omit month. If you supply only one parameter it will be treated as milliseconds.
+You should use at least 2 parameter, otherwise return ms.
+*/
 const d = new Date(2023, 11);
 const d1 = new Date(2023);
 console.log(d);
