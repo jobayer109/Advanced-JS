@@ -83,3 +83,15 @@ reversed1.split("").reverse().join(""); // oot
 //
 let reversed2 = "I love you";
 reversed2.split("").reverse().join(""); // uoy evol I
+
+//
+//
+//
+let str = "My name is Jobayer. ";
+let str3 = "I am a web developer";
+
+console.log(str.concat(str3));
+console.log(str.startsWith("M"));
+console.log(str.endsWith(" "));
+console.log(str.charAt(11));
+console.log(str.substr(11));
