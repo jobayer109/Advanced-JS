@@ -90,8 +90,32 @@ reversed2.split("").reverse().join(""); // uoy evol I
 let str = "My name is Jobayer. ";
 let str3 = "I am a web developer";
 
-console.log(str.concat(str3));
-console.log(str.startsWith("M"));
-console.log(str.endsWith(" "));
-console.log(str.charAt(11));
-console.log(str.substr(11));
+str.concat(str3); // I am a web developer
+str.startsWith("M"); // true
+str.startsWith("m"); // false
+str.endsWith(" "); // true
+str.charAt(11); // J
+str.substr(11); // Jobayer.
+
+//
+//
+//
+//  Advanced way to count the string length
+let strLength = "Jobayer Ahmed";
+
+let length = 0;
+while (true) {
+  if (strLength.charAt(length) === "") {
+    // Be careful about "" and " "
+    // If compare with " " ; the length will 7
+    break;
+  }
+  length++;
+}
+console.log(length);
+
+//
+//
+//  Built in easy method for printing string length
+let dummyStr = "I love Bangladesh";
+let result = dummyStr.length; //  17
