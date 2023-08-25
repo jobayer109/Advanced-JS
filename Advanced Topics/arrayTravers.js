@@ -22,16 +22,17 @@ let sum = 0;
 for (i = 0; i < arr.length; i++) {
   sum += arr[i];
 }
-sum; // 154
+sum; //
 
 //
 // Print odd number of an array
-for (i = 0; i < arr.length; i++) {
-  let newArr = [];
-  if (arr[i] % 2 !== 0) {
-    arr[i] = newArr.push(arr[i]);
-    console.log(newArr);
-  } else {
-    console.log("Even number");
+const array = [10, 24, 35, 36, 51];
+
+for (i = 0; i < array.length; i++) {
+  if (array[i] % 2 === 0) {
+    console.log(array[i]);
   }
+  // else if (array[i] !== 0) {
+  //   console.log(array[i]);
+  // }
 }
