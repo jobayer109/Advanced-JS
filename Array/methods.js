@@ -92,6 +92,13 @@ const sliced2 = fevFruits.slice(1, 4); // [ 'Orange', 'Lemon', 'Apple' ]
 
 // Finding Max and Min Values in an Array:
 
+const minMax = [14, 5, 6, 79, 44, 6, 1, 22];
+
+for (i = 0; i < minMax.length; i++) {
+  let max = Math.max(Number(minMax.toString()));
+  //   console.log(max);
+}
+
 // --------------------------------------------------------------------->
 
 // Search a value in the array
@@ -130,3 +137,5 @@ for (let i = 0; i < phones.length; i++) {
 if (!isFounds) {
   console.log("No phone data related that you searched");
 }
+
+// --------------------------------------------------------------------->
