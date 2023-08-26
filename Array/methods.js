@@ -91,3 +91,42 @@ const sliced2 = fevFruits.slice(1, 4); // [ 'Orange', 'Lemon', 'Apple' ]
 // --------------------------------------------------------------------->
 
 // Finding Max and Min Values in an Array:
+
+// --------------------------------------------------------------------->
+
+// Search a value in the array
+
+const arraySrc = [14, 5, 6, 79, 44, 6, 1, 22];
+
+let find = 79;
+let isFound = false;
+
+for (i = 0; i < arraySrc.length; i++) {
+  if (arraySrc[i] === find) {
+    console.log("Yes, got the number in:", i);
+    isFound = true;
+    break;
+  }
+}
+
+if (!isFound) {
+  console.log("No data found");
+}
+
+//Example-2:
+const phones = ["Helio", "Samsung", "Apple", "Nokia", "Techno", "Sony"];
+
+let findPhone = "Samsung";
+let isFounds = false;
+
+for (let i = 0; i < phones.length; i++) {
+  if (phones[i] === findPhone) {
+    console.log("Found the phone in: ", i);
+    isFounds = true;
+    break;
+  }
+}
+
+if (!isFounds) {
+  console.log("No phone data related that you searched");
+}
