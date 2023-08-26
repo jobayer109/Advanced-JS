@@ -1,20 +1,3 @@
-/*
-    Array methods:
-    ------------------>
-        Array length
-        Array toString()
-        Array pop() 
-        Array push()
-        Array shift()
-        Array unshift()
-        Array join()
-        Array delete()
-        Array concat()
-        Array flat()
-        Array splice()
-        Array slice()
-*/
-
 //
 //
 const arr = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -34,6 +17,7 @@ arr.toString(); //  1,2,3,4,5,6,7,8
 */
 arr.splice(3, 0, 11); //  [  1, 2, 3, 11, 4,  5, 6, 7,  8 ]
 arr.splice(3, 2, 11); //  [  1, 2, 3, 11, 5, 6, 7,  8 ]
+arr.splice(3, 0, 11, 17, 15, 1, 8); //  [  1, 2, 3, 11,  17, 15, 1, 8, 4, 5, 6, 7,  8 ]
 // console.log(arr);
 
 //
