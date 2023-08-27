@@ -23,3 +23,16 @@ console.log(array); // Outputs: [7, 6, 5, 4, 3, 2, 1]
         ২. 
 */
 // ------------------------------------------------------------------------------>>
+
+// Fun with array reverse.
+// Yes, I have done the fun task with array reverse.
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+let reversed = fruits.reverse();
+
+for (let i = 0; i < reversed.length; i++) {
+  let elements = reversed[i];
+  reversed[i] = elements.split("").reverse().join("");
+}
+reversed; // [ 'ognaM', 'elppA', 'egnarO', 'ananaB' ]
