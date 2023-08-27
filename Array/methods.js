@@ -13,6 +13,8 @@
         Array flat()
         Array splice()
         Array slice()
+        Array fill()
+        Array from()
 */
 
 //
@@ -110,14 +112,14 @@ let isFound = false;
 
 for (i = 0; i < arraySrc.length; i++) {
   if (arraySrc[i] === find) {
-    console.log("Yes, got the number in:", i);
+    // console.log("Yes, got the number in:", i);
     isFound = true;
     break;
   }
 }
 
 if (!isFound) {
-  console.log("No data found");
+  // console.log("No data found");
 }
 
 //Example-2:
@@ -137,5 +139,25 @@ for (let i = 0; i < phones.length; i++) {
 if (!isFounds) {
   console.log("No phone data related that you searched");
 }
+
+// --------------------------------------------------------------------->
+
+// Array fill()
+const numArr = [1, 3, 5, 6, 7, 8, 4];
+numArr.fill(0); // [  0, 0, 0, 0, 0, 0, 0 ]
+numArr.fill("Jo"); // [ 'Jo', 'Jo', 'Jo', 'Jo', 'Jo', 'Jo', 'Jo' ]
+numArr.fill(true); // [   true, true, true, true, true, true, true ]
+// console.log(numArr);
+
+// --------------------------------------------------------------------->
+
+// Array from()
+let x = [1, 2, 3];
+let y = Array.from(x);
+
+y[0] = 10;
+
+console.log(x); // [ 1, 2, 3 ]
+console.log(y); // [ 10, 2, 3 ]
 
 // --------------------------------------------------------------------->
