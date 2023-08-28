@@ -2,6 +2,7 @@
     Topics:
       A. Object declaration.
       B. Property access.
+      C. Value assign.
 
 
       A. Object declaration in 3 ways
@@ -73,3 +74,22 @@ const arrayNotation = {
 
 arrayNotation["firstName"]; // Jobayer
 arrayNotation["age"]; // 27
+
+// ------------------------------------------------------------------------->>
+
+// Reassign property value in a object.
+// Two ways: 1. Dot notation, 2. Array notation.
+
+const objAssign = {
+  firstName: "Jobayer",
+  lastName: "Ahmed",
+  age: 27,
+  city: "Rangpur",
+};
+
+objAssign.age = 28;
+objAssign["city"] = "Gaibandha";
+
+objAssign; // { firstName: 'Jobayer', lastName: 'Ahmed', age: 28, city: 'Gaibandha' }
+
+// ------------------------------------------------------------------------->>
