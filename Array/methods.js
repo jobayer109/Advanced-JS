@@ -20,51 +20,51 @@
 //
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
-// Length
+// Length: <<---------------------
 let lengths = fruits.length; // 4
 
 // --------------------------------------------------------------------->
 
-// toString()
+// toString(): <<---------------------
 let toString = fruits.toString(); // Banana,Orange,Apple,Mango
 
 // --------------------------------------------------------------------->
 
-// Join()
+// Join(): <<---------------------
 let joined1 = fruits.join(""); // BananaOrangeAppleMango
 let joined2 = fruits.join(" "); // Banana Orange Apple Mango
 let joined3 = fruits.join(" * "); // Banana * Orange * Apple * Mango
 
 // --------------------------------------------------------------------->
 
-// Delete()
+// Delete(): <<---------------------
 // Using delete leaves undefined holes in the array.
 let deleted = delete fruits[1]; // [ 'Banana', <1 empty item>, 'Apple', 'Mango' ]
 
 // --------------------------------------------------------------------->
 
-// concat()
+// concat(): <<---------------------
 // The concat() method creates a new array.
 // The concat() method can take any number of array arguments.
 // The concat() method can also take strings as arguments
-// Example: 1
+// Example: 1: <<---------------------
 let boys = ["Ahmed", "Joshim"];
 let girls = ["Taima", "Karina"];
 let concatenated = boys.concat(girls); // [ 'Ahmed', 'Joshim', 'Taima',  'Karina' ]
 
-// Example: 2
+// Example: 2: <<---------------------
 const arr1 = ["Cecilie", "Lone"];
 const arr2 = ["Emil", "Tobias", "Linus"];
 const arr3 = ["Robin", "Morgan"];
 const myChildren = arr1.concat(arr2, arr3);
 
-// Example: 3
+// Example: 3: <<---------------------
 const arr4 = ["Emil", "Tobias", "Linus"];
 const childrens = arr4.concat("Peter"); // [ 'Emil', 'Tobias', 'Linus', 'Peter' ]
 
 // --------------------------------------------------------------------->
 
-// flat()
+// flat(): <<---------------------
 const myArr = [
   [1, 2],
   [3, 4],
@@ -92,7 +92,7 @@ const sliced2 = fevFruits.slice(1, 4); // [ 'Orange', 'Lemon', 'Apple' ]
 
 // --------------------------------------------------------------------->
 
-// Finding Max and Min Values in an Array:
+// Finding Max and Min Values in an Array: <<---------------------
 
 const minMax = [14, 5, 6, 79, 44, 6, 1, 22];
 
@@ -103,8 +103,7 @@ for (i = 0; i < minMax.length; i++) {
 
 // --------------------------------------------------------------------->
 
-// Search a value in the array
-
+// Search a value in the array: <<---------------------
 const arraySrc = [14, 5, 6, 79, 44, 6, 1, 22];
 
 let find = 79;
@@ -122,7 +121,7 @@ if (!isFound) {
   // console.log("No data found");
 }
 
-//Example-2:
+//Example-2: <<---------------------
 const phones = ["Helio", "Samsung", "Apple", "Nokia", "Techno", "Sony"];
 
 let findPhone = "Samsung";
@@ -130,19 +129,19 @@ let isFounds = false;
 
 for (let i = 0; i < phones.length; i++) {
   if (phones[i] === findPhone) {
-    console.log("Found the phone in: ", i);
+    // console.log("Found the phone in: ", i);
     isFounds = true;
     break;
   }
 }
 
 if (!isFounds) {
-  console.log("No phone data related that you searched");
+  // console.log("No phone data related that you searched");
 }
 
 // --------------------------------------------------------------------->
 
-// Array fill()
+// Array fill(): <<---------------------
 const numArr = [1, 3, 5, 6, 7, 8, 4];
 numArr.fill(0); // [  0, 0, 0, 0, 0, 0, 0 ]
 numArr.fill("Jo"); // [ 'Jo', 'Jo', 'Jo', 'Jo', 'Jo', 'Jo', 'Jo' ]
@@ -151,13 +150,13 @@ numArr.fill(true); // [   true, true, true, true, true, true, true ]
 
 // --------------------------------------------------------------------->
 
-// Array from()
+// Array from() : <<---------------------
 let x = [1, 2, 3];
 let y = Array.from(x);
 
 y[0] = 10;
 
-console.log(x); // [ 1, 2, 3 ]
-console.log(y); // [ 10, 2, 3 ]
+x; // [ 1, 2, 3 ]
+y; // [ 10, 2, 3 ]
 
 // --------------------------------------------------------------------->
