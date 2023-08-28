@@ -16,3 +16,20 @@ for (i = 0; i < arr.length; i++) {
 if (!isFound) {
   console.log("Data not found");
 }
+
+// ------------------------------------------------------------------------>>
+
+//
+// Find the element is exist or not in an array.
+
+const ar = [1, 2, 3, 4, 5, 6];
+const targetValue = 4;
+
+const index = ar.indexOf(targetValue);
+console.log(index);
+
+if (index !== -1) {
+  console.log(`Target value ${targetValue} found at index ${index}`);
+} else {
+  console.log(`Target value ${targetValue} not found in the array`);
+}
