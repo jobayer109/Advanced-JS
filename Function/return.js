@@ -23,12 +23,12 @@ result1; // Outside of the function the result is 'undefined'
 // -------------------------------------------------------------------------------->>
 
 // Right way of accessing func data.
-function wrongFunc() {
+function rightFunc() {
   let sum = 0;
   for (let i in arguments) {
     sum += arguments[i];
   }
-  return sum; // Return the value
+  return sum; // Return the value for accessing data from outside of the function.
 }
-const result2 = wrongFunc(3, 4, 3);
+const result2 = rightFunc(3, 4, 3);
 result2; // 10
