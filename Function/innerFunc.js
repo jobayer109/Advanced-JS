@@ -1,6 +1,7 @@
 /*
     Topics:
         A. Function in another function
+        B. Different approach
 */
 //
 
@@ -33,3 +34,5 @@ function greetingFunc(greet, name) {
 
 const result = greetingFunc("Welcome", "Jobayer Ahmed");
 console.log(result);
+
+// -------------------------------------------------------------------------------->>
