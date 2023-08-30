@@ -2,7 +2,6 @@
     Topics:
         A. what is function expression ?
         B. Syntax
-
 */
 //
 
