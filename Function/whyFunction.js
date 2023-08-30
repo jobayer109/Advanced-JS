@@ -43,6 +43,6 @@ function sumOfArray(arr) {
   console.log(sum);
 }
 
-sumOfArray([4, 5, 2, 3, 6, 3]); // 23
-sumOfArray([45, 6, 7, 4, 7]); // 69
-sumOfArray([64, 6, 76, 4, 47, 7]); // 204
+sumOfArray(arr1); // 23
+sumOfArray(arr2); // 69
+sumOfArray(arr3); // 204
