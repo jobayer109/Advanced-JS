@@ -1,8 +1,8 @@
 /*
     Topics:
         A. what is arguments ?
-        B. Addition of random number in arguments:
-        C. Multiplication of random number in arguments:
+        B. Addition of random number in arguments.
+        C. Multiplication of random number in arguments.
 
 */
 //
@@ -44,3 +44,5 @@ function multiFunc() {
 
 multiFunc(3, 3); // 9
 multiFunc(3, 3, 3, 4, 8, 6); // 5184
+
+// -------------------------------------------------------------------------------->>
