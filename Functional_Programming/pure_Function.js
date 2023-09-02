@@ -33,3 +33,32 @@ sqr(2); // 4; It alway return same result without side effect.
 sqr(3); // 9; It alway return same result without side effect.
 
 // ----------------------------------------------------------------------------------->>
+
+// Some 'not' a pur function examples.
+
+// Example: 1
+var n = 10;
+function change() {
+  n = 20;
+  // console.log(n);
+}
+n; // 10; There is no side effect.
+change(); // 20; Side effect.
+n; // 20;
+
+// ---------------------<< Not a pure function.
+
+// Example: 2
+var point = {
+  x: 10,
+  y: 11,
+};
+
+function pointChange(point) {
+  point.x = 1010;
+  point.y = 1111;
+  console.log(point);
+}
+point; // { x: 10, y: 11 }
+pointChange(point); // { x: 1010, y: 1111 }
+point; // { x: 1010, y: 1111 }
