@@ -1,10 +1,10 @@
 /*
    Topics:
-      1. Pure function definition and characteristics.
-      2. Some not a pur function example
+      A. Pure function definition and characteristics.
+      B. Some not a pur function example
       
 
-        1. Pure function.
+        A. Pure function.
         ----------------->
             * Pure function always produce the same output for same arguments 
               irrespective of anything else.  
@@ -23,7 +23,7 @@
 
 // ----------------------------------------------------------------------------------->>
 
-// Pure function definition and characteristics.
+// A ----> Pure function definition and characteristics.
 
 // Example: 1
 function sqr(n) {
@@ -34,7 +34,7 @@ sqr(3); // 9; It alway return same result without side effect.
 
 // ----------------------------------------------------------------------------------->>
 
-// Some 'not' a pur function examples.
+// B ----> Some 'not' a pur function examples.
 
 // Example: 1
 var n = 10;
