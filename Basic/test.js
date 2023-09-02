@@ -35,6 +35,24 @@ var p = 3; // Allowed
 //
 const arr = [1, 23, 5, 54, 8, 7];
 const res = arr.push((x = -1));
-console.log(res);
+// console.log(res);
 
-console.log("5" + undefined);
+// // console.log("5" + undefined);
+
+var name = "Jobayer Ahned";
+function A() {
+  B();
+  var a = "I'm function A";
+  console.log(a);
+}
+function B() {
+  C();
+  var b = "I'm function B";
+  console.log(b);
+}
+function C() {
+  console.log("Hello " + name);
+  var c = "I'm function C";
+  console.log(c);
+}
+A();
