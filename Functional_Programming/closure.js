@@ -17,4 +17,4 @@ function func() {
 }
 
 const result = func();
-console.dir(result);
+console.dir(result); // Run this code in chrome dev tool for better understand.
