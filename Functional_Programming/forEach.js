@@ -2,6 +2,10 @@
    Topics:
         1. Array traverse using forEach method.
         2. Custom implementation of array traverse as same as forEach.
+
+    Notes:
+        * forEach can replace the original array element.
+        * map() return a new array without evaluating the main array.
 */
 
 // ----------------------------------------------------------------------------------->>
@@ -33,7 +37,7 @@ let sum1 = 0;
 forEach(array, function (value, index, array) {
   //   console.log(value, index, array);
   sum1 += value;
-  array[index] = value + 1;
+  array[index] = value + 1; // It replace the original array elements
 });
 
 sum1; // 32
