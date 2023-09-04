@@ -60,13 +60,13 @@ res; // 78
 
 function findIndex(arr, cb) {
   for (let i = 0; i < arr.length; i++) {
-    if (cb(i)) {
+    if (cb(arr[i])) {
       return i;
     }
   }
 }
 
-const result = findIndex(arr, function (index) {
-  return index === 32;
+const result = findIndex(arr, function (value) {
+  return value === 78;
 });
-console.log(result);
+result; // 4; (index number of 78)
