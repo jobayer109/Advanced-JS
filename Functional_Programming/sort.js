@@ -11,8 +11,13 @@
 
 
     Notes:
-        * sort() method can change the main array.
-        * 
+        => sort() method can change the main array.
+       
+        => In every() method, ekta kisu jodi condition er baire chole jay, tobe array ti 
+          'false' return korbe.
+
+        => In some() method, ekta kisu jodi condition er moddhe pore jay, tobe array ti 
+          'true' return korbe.
 */
 
 // ----------------------------------------------------------------------------------->>
@@ -73,4 +78,15 @@ persons;
     { name: "D", age: 23 },  
     { name: "B", age: 45 },];
 */
+
 // ----------------------------------------------------------------------------------->>
+
+//  C. every() method.
+// In every() method, ekta kisu jodi condition er baire chole jay, tobe array ta        'false' return korbe.
+
+const myArr = [1, 7, 6, 9, 5, 4, 9, 5, 8, 5];
+
+const result1 = myArr.every(function (value) {
+  return value >= 0; // true
+});
+result1; // true
