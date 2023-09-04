@@ -14,8 +14,7 @@ Q: What is functional programming ?
     Its main focus is on “what to solve” in contrast to an imperative style where the 
     main focus is “how to solve”.
 
-    
-    -----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
 
     Three main terms:
         1. Pure function.
@@ -25,7 +24,7 @@ Q: What is functional programming ?
      
      ---->> Function acts like a value (Definition)
 
-    -----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
     
     Notes:
         * It uses expressions instead of statements. An expression is evaluated to
