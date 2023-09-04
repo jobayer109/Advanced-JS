@@ -43,16 +43,26 @@ var name = "Jobayer Ahned";
 function A() {
   B();
   var a = "I'm function A";
-  console.log(a);
+  // console.log(a);
 }
 function B() {
   C();
   var b = "I'm function B";
-  console.log(b);
+  // console.log(b);
 }
 function C() {
   console.log("Hello " + name);
   var c = "I'm function C";
-  console.log(c);
+  // console.log(c);
 }
 A();
+
+// --------------------------------------------------------->>
+
+var n = 10;
+
+function A() {
+  var n = 12;
+}
+
+console.log(n);
