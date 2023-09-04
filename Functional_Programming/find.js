@@ -40,3 +40,33 @@ const foundIndex = arr.findIndex(function (value) {
 foundIndex; // index number: 7
 
 // ----------------------------------------------------------------------------------->>
+
+function find(arr, callback) {
+  for (let i = 0; i < arr.length; i++) {
+    if (callback(arr[i])) {
+      return arr[i];
+    } else {
+      return "The invalid input";
+    }
+  }
+}
+
+const res = find(arr, function (value, index, arr) {
+  return value === 78;
+});
+res; // 78
+
+// ---------------------<<
+
+function findIndex(arr, cb) {
+  for (let i = 0; i < arr.length; i++) {
+    if (cb(i)) {
+      return i;
+    }
+  }
+}
+
+const result = findIndex(arr, function (index) {
+  return index === 32;
+});
+console.log(result);
