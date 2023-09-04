@@ -90,3 +90,14 @@ const result1 = myArr.every(function (value) {
   return value >= 0; // true
 });
 result1; // true
+
+// ----------------------------------------------------------------------------------->>
+
+// D. some() method. In some() method, ekta kisu jodi condition er moddhe pore jay, tobe array ti 'true' return korbe.
+
+const myArr1 = [1, 7, 6, 9, 5, 4, 9, 5, 8, 5, -2];
+
+const result2 = myArr1.some(function (value) {
+  return value <= 0;
+});
+result2; // true
