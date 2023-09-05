@@ -3,9 +3,10 @@
         A. Currying function 
 
     Notes:
-        * Using it we can control arguments passing throw a function.
+        * Using it we can control arguments passing.
         * It use in production level to deal multiple arguments.
         * No built in tool and software on it.
+        * It created based on higher order function.
 */
 
 // ----------------------------------------------------------------------------------->>
