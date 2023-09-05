@@ -77,3 +77,8 @@ const greet = function (name) {
 };
 const message = greet("John");
 message; // "Hello, John!"
+// --------------------------------------------------------->>
+
+const arr1 = [1, 23, 5, 54, 8, 7];
+arr1[-1] = 2;
+arr1; // [ 1, 23, 5, 54, 8, 7, '-1': 2 ]

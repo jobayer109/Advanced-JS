@@ -8,7 +8,7 @@
       A. Object declaration in 3 ways
           1. Literal object 
           2. const obj1 = Object() ---->  constructor
-          3. const obj2 = new Object()  ---->  constructor with new keyword
+          3. const obj2 = new Object()  ---->  constructor with 'new' keyword
 
 
       B. Property's value access.
