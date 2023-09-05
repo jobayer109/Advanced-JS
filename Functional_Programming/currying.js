@@ -18,3 +18,15 @@ function add(a, b, c) {
 add(5, 5, 5); // 15
 
 // ----------------------------------------------------------------------------------->>
+
+// Currying function implement of code above.
+function currying(a) {
+  return function (b) {
+    return function (c) {
+      return a + b + c;
+    };
+  };
+}
+
+const result = currying(5)(5)(10); // currying function cal.
+result; // 20
