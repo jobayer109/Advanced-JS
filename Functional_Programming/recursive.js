@@ -3,7 +3,7 @@
         A. Recursive function 
         B. Print a code 10 times.
         C. Sum of any numbers.
-        D. 
+        D. Factorial of numbers.
 
     Notes:
         * Je function nijei nijeke call kore and  loop er moto behave kore. But     
@@ -17,7 +17,7 @@
 
 // ----------------------------------------------------------------------------------->>
 
-// Print a code 10 times using recursive
+// B. Print a code 10 times using recursive
 function sayHi10Times(n) {
   if (n === 0) {
     return;
@@ -29,7 +29,7 @@ sayHi10Times(10);
 
 // ----------------------------------------------------------------------------------->>
 
-// Sum of any numbers
+// C. Sum of any numbers
 function sum(n) {
   if (n === 1) {
     return 1;
@@ -38,3 +38,16 @@ function sum(n) {
 }
 const result = sum(5);
 result; // 15
+
+// ----------------------------------------------------------------------------------->>
+
+// D. Factorial of numbers.
+function factorial(n) {
+  if (n === 1) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+
+const result1 = factorial(5);
+result1; // output: 1*2*3*4*5 = 120
