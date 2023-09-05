@@ -1,11 +1,11 @@
 /*
     Topics:
-        A. Normal function declaration (add, sub)
+        A. Normal function declaration (addition, subtraction operation)
 
 */
 // --------------------------------------------------------------------------->>
 
-// Add numbers
+// addition numbers
 function add(a, b) {
   const result = a + b;
   //   console.log(result);
@@ -13,13 +13,14 @@ function add(a, b) {
 add(5, 9); // 14
 add(12, 20); // 32
 
-//
-// Sub number:
+// -------------------------->>
+
+// subtraction number:
 function sub(a, b) {
   const result = a - b;
-  //   console.log(result);
+  return result;
 }
-sub(12, 8); // 4
-sub(58, 8); // 50
+const res1 = sub(12, 8); // 4
+const res2 = sub(58, 8); // 50
 
 // --------------------------------------------------------------------------->>

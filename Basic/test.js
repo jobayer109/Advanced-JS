@@ -51,7 +51,7 @@ function B() {
   // console.log(b);
 }
 function C() {
-  console.log("Hello " + name);
+  // console.log("Hello " + name);
   var c = "I'm function C";
   // console.log(c);
 }
@@ -64,5 +64,16 @@ var n = 10;
 function A() {
   var n = 12;
 }
+// --------------------------------------------------------->>
 
-console.log(n);
+function A(x = 10, y = 12) {
+  return x + y;
+}
+const res1 = A();
+// --------------------------------------------------------->>
+
+const greet = function (name) {
+  return `Hello, ${name}!`;
+};
+const message = greet("John");
+message; // "Hello, John!"

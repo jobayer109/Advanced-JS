@@ -32,7 +32,7 @@ if (true) {
 // Functional scope
 // simple functional scope:
 function x() {
-  //   var a = 55;
+  var a = 55;
   function y() {
     var a = 88;
     console.log(a);
