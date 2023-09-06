@@ -13,11 +13,11 @@
     Notes:
         => sort() method can change the main array.
        
-        => In every() method, ekta kisu jodi condition er baire chole jay, tobe array ti 
-          'false' return korbe.
+        => In every() method, ekta kisu jodi condition er baire chole jay, tobe 
+        array ti 'false' return korbe.
 
-        => In some() method, ekta kisu jodi condition er moddhe pore jay, tobe array ti 
-          'true' return korbe.
+        => In some() method, ekta kisu jodi condition er moddhe pore jay, tobe array 
+        ti 'true' return korbe.
 */
 
 // ----------------------------------------------------------------------------------->>
@@ -82,7 +82,7 @@ persons;
 // ----------------------------------------------------------------------------------->>
 
 //  C. every() method.
-// In every() method, ekta kisu jodi condition er baire chole jay, tobe array ta        'false' return korbe.
+// In every() method, ekta kisu jodi condition er baire chole jay, tobe array ta   'false' return korbe.
 
 const myArr = [1, 7, 6, 9, 5, 4, 9, 5, 8, 5];
 
