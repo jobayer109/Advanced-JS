@@ -4,27 +4,28 @@
         B. Functional scope
             1. normal way.
             2. advance way.
+            3. functional scope chain
 */
 //
 
 // -------------------------------------------------------------------------------->>
 
 // Normal scope: 1
-var a = "Global scope";
+var p = "Global scope";
 
 {
-  a; // abc
+  p; // abc
 }
 
 // Normal scope: 2
 if (true) {
-  a; // abc
+  p; // abc
 }
 
 // Normal scope: 3
 if (true) {
-  var a = 10;
-  a; // 10
+  var p = 10;
+  p; // 10
 }
 
 // -------------------------------------------------------------------------------->>
@@ -35,7 +36,7 @@ function x() {
   var a = 55;
   function y() {
     var a = 88;
-    console.log(a);
+    return a; // 88
   }
   y();
 }
@@ -53,10 +54,40 @@ function func(n) {
   }
 
   if (func1() && func2()) {
-    console.log(`Both are dividable by 3 and 5`);
+    return `Both are dividable by 3 and 5`;
   } else {
-    console.log("Invalid data found");
+    return "Invalid data found";
   }
 }
 
 func(16);
+
+// -------------------------------------------------------------------------------->>
+
+// Functional scope chain:
+
+var a = 11;
+
+function A() {
+  var b = 12;
+  function B() {
+    var c = 15;
+    console.log(c);
+  }
+
+  function C() {
+    var d = 56;
+    console.log(d);
+  }
+
+  console.log(b); // 12
+  D(b); // 13
+  B(); // 15
+  C(); // 56
+}
+
+function D(n) {
+  return n + 1; // 13
+}
+
+A();
