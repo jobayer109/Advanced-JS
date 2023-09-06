@@ -39,7 +39,8 @@ function test() {
   innerFunc();
 }
 
-//
+//--------------------------------------------------------------------------------->>
+
 // Function executing outside it's lexical scope.
 
 function test1() {
@@ -51,6 +52,16 @@ function test1() {
 }
 const result1 = test1();
 console.log(result1()); // executing outside it's lexical scope
+
+//--------------------------------------------------------------------------------->>
+
+// Immediately Invoked Function Expressions (IIFEs). closure & loop issue.
+
+for (let i = 1; i <= 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 1000 * i);
+}
 
 //--------------------------------------------------------------------------------->>
 
