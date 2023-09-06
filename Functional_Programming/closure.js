@@ -63,6 +63,15 @@ for (let i = 1; i <= 5; i++) {
   }, 1000 * i);
 }
 
+// Another approach: IIFEs
+for (let i = 1; i <= 5; i++) {
+  (function X(n) {
+    setTimeout(function () {
+      console.log(n);
+    }, 1000 * n);
+  })(i);
+}
+
 //--------------------------------------------------------------------------------->>
 
 // Simple look of closure.
