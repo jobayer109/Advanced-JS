@@ -1,4 +1,13 @@
 /*
+    Topics: 
+    -------
+        A. Closure's definition
+        B. Explanation of closure's definition with code example.
+        C. Immediately Invoked Function Expressions (IIFEs). closure & loop issue.
+        D. Simple closure and learn console.dir() operation.
+
+
+
    Notes:
         * Closure is when a function is able to remember and access it's lexical 
           scope, Even when that function executing outside it's lexical scope.
