@@ -11,6 +11,9 @@
         * Variable er declaration and function, array, object esober ref create kore.
         * Function er vitore kono code run korar thakle sekhaneo ekoi kaj hoy. initial 
           phase and execution phase duitai hoy.
+        * creational phase a execution process skip kore, That's mean- "console.log", 
+          "function call"; egulo skip korbe.
+        * Only variable declaration will be consider, not initialization.
 
 
      B. Execution phase:
