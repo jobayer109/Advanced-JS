@@ -4,6 +4,7 @@
         B. Array of object sorting. 
         C. every() method.
         D. some() method.
+        E. Different sorting process without if conditions.
 
     A. Primitive array sorting:
        -----------------------
@@ -79,7 +80,7 @@ persons;
     { name: "B", age: 45 },];
 */
 
-// ----------------------------------------------------------------------------------->>
+// ------------------------------------------------------------------------------->>
 
 //  C. every() method.
 // In every() method, ekta kisu jodi condition er baire chole jay, tobe array ta   'false' return korbe.
@@ -91,7 +92,7 @@ const result1 = myArr.every(function (value) {
 });
 result1; // true
 
-// ----------------------------------------------------------------------------------->>
+// -------------------------------------------------------------------------------->>
 
 // D. some() method. In some() method, ekta kisu jodi condition er moddhe pore jay, tobe array ti 'true' return korbe.
 
@@ -101,3 +102,23 @@ const result2 = myArr1.some(function (value) {
   return value <= 0;
 });
 result2; // true
+
+// -------------------------------------------------------------------------------->>
+
+// E. Different sorting process.
+// Regular function:
+const sortArr = [150, 12, 4, 1, 9, 17, 22, -1, -8];
+sortArr.sort(function (a, b) {
+  return a - b;
+});
+
+sortArr; // [ -8, -1, 1, 4, 9, 12, 17, 22, 150 ]
+
+// Arrow function:
+sortArr.sort((a, b) => {
+  return a - b;
+});
+
+sortArr; // [ -8, -1, 1, 4, 9, 12, 17, 22, 150 ]
+
+// -------------------------------------------------------------------------------->>
