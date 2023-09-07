@@ -148,11 +148,26 @@ hello.method();
 // --------------------------------------------------------->>
 // Array sorting
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.sort();
-const reversed = fruits.reverse();
+const sorted1 = fruits.sort(); // [ 'Apple', 'Banana', 'Mango', 'Orange' ]
 
 let neWFruits = [];
-const process = reversed.forEach(function (value) {
+const process = sorted1.forEach(function (value) {
   neWFruits.push(value.split("").reverse().join(""));
 });
-console.log(neWFruits);
+neWFruits; // [ 'elppA', 'ananaB', 'ognaM', 'egnarO' ]
+
+// --------------------------------------------------------->>
+
+// Number sorting
+const numArr = [1, 6, 8, "4", 9, 3, "5", 2, -1, -7, -9, 12];
+// 1 6 4 8
+const sorted = numArr.sort(function (a, b) {
+  if (a > b) {
+    return 1;
+  } else if (a < b) {
+    return -1;
+  } else {
+    return 0;
+  }
+});
+console.log(sorted);
