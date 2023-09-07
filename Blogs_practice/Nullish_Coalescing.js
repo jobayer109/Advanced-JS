@@ -1,3 +1,9 @@
+/*
+        Nullish coalescing allows you to provide a default value when a variable is 
+        null or undefined. It uses the ?? syntax to check if a value is null or 
+        undefined, and provide a default value if it is.
+*/
+
 // Nullish Coalescing -----> ?? (double)
 const value1 = null;
 const value2 = undefined;
