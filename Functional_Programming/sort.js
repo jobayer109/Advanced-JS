@@ -151,6 +151,8 @@ points[points.length - 1]; // highest value is: 100
 
 // G. Math.min() & Math.max() method on an Array.
 
+// Math.max.apply(null, [1, 2, 3]) is equivalent ----> Math.max(1, 2, 3).
+
 function myArrayMin(arr) {
   return Math.min.apply(null, arr);
 }
@@ -160,5 +162,18 @@ function myArrayMax(arr) {
 
 const resMin = myArrayMin([40, 100, 1, 5, 25, 10]); // 1
 const resMax = myArrayMax([40, 100, 1, 5, 25, 10]); // 100
+
+// Custom approach:
+function myArrMax(arr) {
+  let len = arr.length;
+  let max = -Infinity;
+  while (len--) {
+    if (arr[len] > max) {
+      max = arr[len];
+    }
+  }
+  return max;
+}
+const maxRes = myArrMax([40, 100, 1, 5, 25, 10]);
 
 // -------------------------------------------------------------------------------->>
