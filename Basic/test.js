@@ -82,3 +82,28 @@ message; // "Hello, John!"
 const arr1 = [1, 23, 5, 54, 8, 7];
 arr1[-1] = 2;
 arr1; // [ 1, 23, 5, 54, 8, 7, '-1': 2 ]
+
+// --------------------------------------------------------->>
+// Recursive function
+function recursive(n) {
+  if (n === 0) {
+    return;
+  }
+  console.log(`I am recursive function`);
+  recursive(n - 1);
+}
+// recursive(5);
+
+//
+function test(n) {}
+
+// test(5);
+// test(10);
+
+//
+const print = () => {
+  for (let i = 0; i < n; i++) {
+    console.log("Hello");
+  }
+};
+print(2);
