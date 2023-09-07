@@ -103,7 +103,35 @@ function test(n) {}
 //
 const print = () => {
   for (let i = 0; i < n; i++) {
-    console.log("Hello");
+    return "Hello";
   }
 };
-print(2);
+// print(2);
+
+// --------------------------------------------------------->>
+
+obj1; // undefined; var keyword
+obj1; // Cannot access 'obj1' before initialization; const keyword
+obj1; // Cannot access 'obj1' before initialization; let keyword
+
+var obj1 = new Object();
+obj1.name = "Jobayer";
+obj1.age = 27;
+
+obj1; // { name: 'Jobayer', age: 27 }
+
+// --------------------------------------------------------->>
+
+// array; // undefined; var keyword
+// array; // Cannot access 'array' before initialization; const keyword
+// array; // Cannot access 'array' before initialization; let keyword
+
+const array = Array();
+array.push(12, 15);
+array[2] = 13;
+array[6] = 13;
+// array.splice(2, 0, 88);
+// array.splice(6, 0, 40);
+array.splice(3, 3);
+
+array;
