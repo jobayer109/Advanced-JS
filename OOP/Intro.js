@@ -1,14 +1,33 @@
 /*
     Topics:
     -------
-        A. Procedural syntax
-        B. Object oriented syntax
+        A. Definition of 'Object' and 'OOP'
+        B. Procedural syntax
+        C. Object oriented syntax
+        D. Think everything as an object.
 
 
-        B. Object oriented syntax:
+        A. Definition of 'Object' and 'OOP':
+        ------------------------------------
+            Object: Everything which takes multiple properties to describe is an 
+                    object.
+            
+            Object Oriented Programming: Object Oriented Programming is a 
+                    programming paradigm based on the concept of "Object", which can 
+                    contain data, in the form of field (known as attribute), And 
+                    code, in the form of procedure (known as method).
+
+
+        C. Object oriented notes:
         -------------------------
             * Think all as like of object.
             * No need to pass arguments
+            
+            
+        D. Think everything as an object.
+        --------------------------------
+            * 
+
 
 */
 
@@ -45,3 +64,5 @@ const rect = {
 
 const result1 = rect.calculateArea(); // 180
 const result2 = rect.calculateRange(); // 54
+
+// ---------------------------------------------------------------------------->>
