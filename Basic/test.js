@@ -135,3 +135,14 @@ array[6] = 13;
 array.splice(3, 3);
 
 array;
+
+// --------------------------------------------------------->>
+const hello = {
+  method: function myFunc() {
+    console.log(this); // It refers the global object.
+  },
+};
+
+hello.method();
+
+// --------------------------------------------------------->>
