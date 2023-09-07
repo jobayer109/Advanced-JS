@@ -5,10 +5,22 @@
         C. every() method.
         D. some() method.
         E. Different sorting process without if conditions.
+        F. Find the Highest (or Lowest) Array Value
 
     A. Primitive array sorting:
        -----------------------
         * sort() method by default sort an primitive array to ascending order.
+
+        * When the sort() function compares two values, it sends the values to the 
+          compare function, and sorts the values according to the returned 
+          (negative, zero, positive) value.
+
+      ===> If the result is negative, a is sorted before b.
+
+      ===> If the result is positive, b is sorted before a.
+
+      ===> If the result is 0, no changes are done with the sort order of the two 
+           values.
 
 
     Notes:
@@ -120,5 +132,16 @@ sortArr.sort((a, b) => {
 });
 
 sortArr; // [ -8, -1, 1, 4, 9, 12, 17, 22, 150 ]
+
+// -------------------------------------------------------------------------------->>
+
+//  F. Find the Highest (or Lowest) Array Value
+const points = [40, 100, 1, 5, 25, 10];
+points.sort((a, b) => {
+  return a - b;
+});
+
+points[0]; // Lowest value is: 1
+points[points.length - 1]; // highest value is: 100
 
 // -------------------------------------------------------------------------------->>
