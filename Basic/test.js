@@ -139,10 +139,20 @@ array;
 // --------------------------------------------------------->>
 const hello = {
   method: function myFunc() {
-    console.log(this); // It refers the global object.
+    // console.log(this); // It refers the global object.
   },
 };
 
 hello.method();
 
 // --------------------------------------------------------->>
+// Array sorting
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+const reversed = fruits.reverse();
+
+let neWFruits = [];
+const process = reversed.forEach(function (value) {
+  neWFruits.push(value.split("").reverse().join(""));
+});
+console.log(neWFruits);
