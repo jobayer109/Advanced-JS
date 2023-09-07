@@ -5,7 +5,8 @@
         C. every() method.
         D. some() method.
         E. Different sorting process without if conditions.
-        F. Find the Highest (or Lowest) Array Value
+        F. Find the Highest (or Lowest) Array Value.
+        G. Math.min() & Math.max() method on an Array.
 
     A. Primitive array sorting:
        -----------------------
@@ -143,5 +144,21 @@ points.sort((a, b) => {
 
 points[0]; // Lowest value is: 1
 points[points.length - 1]; // highest value is: 100
+
+// Same method we can apply for descending order of an array.
+
+// -------------------------------------------------------------------------------->>
+
+// G. Math.min() & Math.max() method on an Array.
+
+function myArrayMin(arr) {
+  return Math.min.apply(null, arr);
+}
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+
+const resMin = myArrayMin([40, 100, 1, 5, 25, 10]); // 1
+const resMax = myArrayMax([40, 100, 1, 5, 25, 10]); // 100
 
 // -------------------------------------------------------------------------------->>
