@@ -174,5 +174,9 @@ const sorted = numArr.sort(function (a, b) {
 sorted; // [ -9, -7,  -1,  1, 2, 3,  '4', '5', 6, 8, 9,  12 ]
 
 // ------------------------------------------------------------------->>
-
+if (0 === -0) {
+  console.log("Ok");
+} else {
+  console.log("Not ok");
+}
 //
