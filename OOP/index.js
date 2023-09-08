@@ -11,6 +11,7 @@
         E. call() method
         F. apply() method
         G. bind() method
+        H. Pass by value vs Pass by Reference
 
     Description:_________________________________________________________________
 
@@ -59,6 +60,17 @@
                variable. For this approach, we can use call the function in many times 
                passing different arguments
 
+
+         H. Pass by value vs Pass by Reference:
+         --------------------------------------
+            1. Pass by value ----> If we pass 'primitive' type data as arguments, it able 
+               to change the inner function's calculation. Otherwise, the changed value 
+               isn't accessible outside of the function.  
+            2. Pass by Reference ----> If we pass 'object' type data as arguments, it 
+               able to change both the inner function's calculation and outside 
+               accessibility. And we return the 'changed' result in inner  function and 
+               outer function. 
+            3. All primitive data are immutable (অপরিবর্তনীয়)
 */
 
 // Object literal
@@ -181,5 +193,35 @@ function bindFunc2(c, d) {
 }
 const bindRes2 = bindFunc2.bind({ a: 10, b: 20 }); // If function's args expected.
 bindRes2(5, 10);
+
+// --------------------------------------------------------------------------->>
+
+// Pass by value vs Pass by Reference:
+// Call by value vs Call by Reference:
+
+// for Primitive data type: immutable
+let m = 10; // This is immutable data
+function change(n) {
+  n += 100;
+  console.log(n);
+}
+change(m); // 110
+m; // 10; This is immutable data
+
+//
+// for Object data type: mutable
+
+const obj = {
+  a: 10,
+  b: 20,
+};
+
+function changeMe(obj) {
+  obj.a = obj.a + 5;
+  obj.b = obj.b + 6;
+  obj; // {a: 15, b: 26}
+}
+changeMe(obj);
+obj; // {a: 15, b: 26} ----> mutable
 
 // --------------------------------------------------------------------------->>
