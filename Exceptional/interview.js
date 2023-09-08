@@ -134,10 +134,10 @@ for (var j = 0; j < closureArr.length; j++) {
 
 Due to the concept of closures and how JavaScript handles variable scope, the actual output will be different. When the setTimeout callbacks are executed after the delay of 3000 milliseconds, they will all reference the same variable i, which will have a final value of 4 after the loop has been completed. As a result, the output of the code will be:
 
-Index: 4, element: undefined
-Index: 4, element: undefined
-Index: 4, element: undefined
-Index: 4, element: undefined
+    Index: 4, element: undefined
+    Index: 4, element: undefined
+    Index: 4, element: undefined
+    Index: 4, element: undefined
 
 This behavior occurs because the var keyword does not have a block scope, and the setTimeout callbacks capture the reference to the same i variable. When the callbacks execute, they all see the final value of i, which is 4, and try to access arr[4], which is undefined.
 
