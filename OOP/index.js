@@ -3,9 +3,9 @@
     -------
         A. Object literals
         B. 'this' keyword's use case.
-        C. Patterns 
+        C. Patterns (class)
             1. Factory pattern 
-            2. Constructor pattern (Class)
+            2. Constructor pattern
 
 
     Notes:
@@ -41,7 +41,7 @@ another.print();
 
 // Factory pattern
 
-function factoryRect(width, height) {
+function FactoryRect(width, height) {
   return {
     width: width,
     height: height,
@@ -56,5 +56,33 @@ function factoryRect(width, height) {
   };
 }
 
-const res1 = factoryRect(100, 80);
-res1.draw();
+const rect1 = FactoryRect(100, 80);
+// rect1.draw();
+const rect2 = FactoryRect(12, 6);
+// rect2.draw();
+
+// --------------------------------------------------------------------------->>
+
+// Constructor pattern
+
+const ConstructorRect = function (width, height) {
+  this.width = width;
+  this.height = height;
+
+  this.draw = function () {
+    console.log(`I am a constructor pattern`);
+    this.properties();
+  };
+
+  this.properties = function () {
+    console.log("Width: " + this.width);
+    console.log("Height: " + this.height);
+  };
+};
+
+const rect3 = new ConstructorRect(15, 8);
+// rect3.draw();
+const rect4 = new ConstructorRect(36, 12);
+// rect4.draw();
+
+// --------------------------------------------------------------------------->>
