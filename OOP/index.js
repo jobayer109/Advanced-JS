@@ -4,26 +4,49 @@
         A. Object literals
         B. 'this' keyword's use case.
         C. Patterns (class)
-            1. Factory pattern 
+            1. Factory literal pattern 
             2. Constructor / class pattern
                ----> without 'new' keyword the constructor function can't work properly.
         D. "new" keyword
+        E. call() method
+        F. apply() method
+        G. bind() method
 
     Description:_________________________________________________________________
 
          B. 'this' keyword:
-         -----------------------------
-              1. This keyword always refers an object.
-              2. If it can't access any object, it refer window object.
+         -----------------
+            1. This keyword always refers an object.
+            2. If it can't access any object, it refer window object.
 
 
          D. "new" keyword:
          -----------------
            In constructor / class function "new" keyword performs 3  steps works:
-              1. Create an empty object.
-              2. It bind with "this" keyword of the constructor function.
-              3. It can copy constructor func's prototypes and then inherit to the obj.
+            1. Create an empty object.
+            2. It bind with "this" keyword of the constructor function.
+            3. It can copy constructor func's prototypes and then inherit to the obj.
 
+        
+         E. call() method:
+         -----------------
+            1. If we want write pure function and use "this" keyword, we should call() 
+               method and pass a object. Otherwise, it will refer window object and 
+               result will be NaN.
+            2. If there any function arguments expected, we should pass the args after 
+               the object using comma ",".
+
+
+         F. apply() method:
+         -----------------
+            1. As same as the point 1 of call() method.
+            2. But, If there any function arguments expected, we should pass the args 
+               after the object using an array.
+
+
+         G. bind() method:
+         -----------------
+            1. 
 */
 
 // Object literal
@@ -51,7 +74,7 @@ another.print();
 
 // --------------------------------------------------------------------------->>
 
-// Factory pattern
+// Factory literal pattern
 
 function FactoryRect(width, height) {
   return {
@@ -96,5 +119,21 @@ const rect3 = new ConstructorRect(15, 8); // without new keyword the constructor
 // rect3.draw();
 const rect4 = new ConstructorRect(36, 12);
 // rect4.draw();
+
+// --------------------------------------------------------------------------->>
+
+// E. call() method:
+
+// If function's args not expected.
+function callFunc1() {
+  console.log(this.a + this.b);
+}
+callFunc1.call({ a: 10, b: 20 }); // If function's args not expected.
+
+// If function's args expected.
+function callFunc2(c, d) {
+  console.log(this.a + this.b + c + d);
+}
+callFunc2.call({ a: 10, b: 20 }, 5, 10); // If function's args expected.
 
 // --------------------------------------------------------------------------->>
