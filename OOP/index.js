@@ -1,4 +1,5 @@
 /*
+
     Topics:
     -------
         A. Object literals
@@ -69,9 +70,13 @@
             2. Pass by Reference ----> If we pass 'object' type data as arguments, it 
                able to change both the inner function's calculation and outside 
                accessibility. And we return the 'changed' result in inner  function and 
-               outer function. 
+               outer function. Because memory store the object type data as a reference 
+               with unique id number.
             3. All primitive data are immutable (অপরিবর্তনীয়)
+
 */
+
+// --------------------------------------------------------------------------->>
 
 // Object literal
 const rect = {
@@ -203,7 +208,7 @@ bindRes2(5, 10);
 let m = 10; // This is immutable data
 function change(n) {
   n += 100;
-  console.log(n);
+  n; // 110
 }
 change(m); // 110
 m; // 10; This is immutable data
