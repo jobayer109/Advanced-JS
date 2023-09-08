@@ -50,7 +50,7 @@ function duplicate(array) {
 
 const arr = [1, 2, 3];
 const newArr = duplicate(arr);
-console.log(newArr);
+newArr; // [ 1, 2, 3, 1, 2, 3 ]
 
 /*
     The duplicate function uses a loop to go through each item in the given array. But 
@@ -71,20 +71,45 @@ console.log(newArr);
 
 // Scope
 function foo() {
-  console.log(a);
+  // console.log(a);
 }
 
 function bar() {
-  var a = 3;
+  var x = 3;
   foo();
 }
 
-var a;
-a = 5;
+var x;
+x = 5;
 bar();
 
 // ------------------------------------------------------------------->>
+
+// Object Coercion (জবরদস্তি) ----> object conversion
+const obj = {
+  valueOf: () => 42,
+  toString: () => 27,
+};
+obj + ""; // 42; This happened for 'Object conversion'.
+
 // ------------------------------------------------------------------->>
+
+// Understanding Object Keys
+let a = {};
+let b = { key: "test" };
+let c = { key: "test" };
+
+a[b] = "123"; // Here, used 'object' as key in the 'object'. -----> [object Object]: "123"
+a[c] = "456";
+
+a; // { '[object Object]': '456' }
+
+/*
+JavaScript employs the default toString() method to convert object keys into strings. But why? In JavaScript, object keys are always strings(or symbols), or they are automatically converted to strings via implicit coercion. When you use any value other than a string (e.g., a number, object, or symbol) as a key in an object, JavaScript will internally convert that value to its string representation before using it as a key.
+
+Consequently, when we use objects b and c as keys in object a, both are transformed into the same string representation: [object Object]. 
+*/
+
 // ------------------------------------------------------------------->>
 // ------------------------------------------------------------------->>
 // ------------------------------------------------------------------->>
