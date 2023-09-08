@@ -5,12 +5,24 @@
         B. 'this' keyword's use case.
         C. Patterns (class)
             1. Factory pattern 
-            2. Constructor pattern
+            2. Constructor / class pattern
+               ----> without 'new' keyword the constructor function can't work properly.
+        D. "new" keyword
+
+    Description:_________________________________________________________________
+
+         B. 'this' keyword:
+         -----------------------------
+              1. This keyword always refers an object.
+              2. If it can't access any object, it refer window object.
 
 
-    Notes:
-        * This keyword always refers an object.
-        * If it can't access any object, it refer window object.
+         D. "new" keyword:
+         -----------------
+           In constructor / class function "new" keyword performs 3  steps works:
+              1. Create an empty object.
+              2. It bind with "this" keyword of the constructor function.
+              3. It can copy constructor func's prototypes and then inherit to the obj.
 
 */
 
@@ -63,10 +75,10 @@ const rect2 = FactoryRect(12, 6);
 
 // --------------------------------------------------------------------------->>
 
-// Constructor pattern
+// Constructor/class pattern
 
 const ConstructorRect = function (width, height) {
-  this.width = width;
+  this.width = width; // Normally, in a function "this" keyword refers the window obj.
   this.height = height;
 
   this.draw = function () {
@@ -80,7 +92,7 @@ const ConstructorRect = function (width, height) {
   };
 };
 
-const rect3 = new ConstructorRect(15, 8);
+const rect3 = new ConstructorRect(15, 8); // without new keyword the constructor function can't work properly.
 // rect3.draw();
 const rect4 = new ConstructorRect(36, 12);
 // rect4.draw();
