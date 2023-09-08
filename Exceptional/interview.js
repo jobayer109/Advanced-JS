@@ -120,6 +120,31 @@ Consequently, when we use objects b and c as keys in object a, both are transfor
 [] === []; // false
 
 // ------------------------------------------------------------------->>
+
+// Closure
+const closureArr = [10, 12, 15, 21];
+for (var j = 0; j < closureArr.length; j++) {
+  // use let to resolve this issue.
+  setTimeout(function () {
+    console.log("Index: " + j + ", element: " + closureArr[j]);
+  }, 2000);
+}
+
+/*
+
+Due to the concept of closures and how JavaScript handles variable scope, the actual output will be different. When the setTimeout callbacks are executed after the delay of 3000 milliseconds, they will all reference the same variable i, which will have a final value of 4 after the loop has been completed. As a result, the output of the code will be:
+
+Index: 4, element: undefined
+Index: 4, element: undefined
+Index: 4, element: undefined
+Index: 4, element: undefined
+
+This behavior occurs because the var keyword does not have a block scope, and the setTimeout callbacks capture the reference to the same i variable. When the callbacks execute, they all see the final value of i, which is 4, and try to access arr[4], which is undefined.
+
+To achieve the desired output, you can use the let keyword to create a new scope for each iteration of the loop, ensuring that each callback captures the correct value of i
+
+*/
+
 // ------------------------------------------------------------------->>
 // ------------------------------------------------------------------->>
 // ------------------------------------------------------------------->>
