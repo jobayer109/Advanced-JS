@@ -126,14 +126,30 @@ const rect4 = new ConstructorRect(36, 12);
 
 // If function's args not expected.
 function callFunc1() {
-  console.log(this.a + this.b);
+  this.a + this.b; // 30
 }
 callFunc1.call({ a: 10, b: 20 }); // If function's args not expected.
 
 // If function's args expected.
 function callFunc2(c, d) {
-  console.log(this.a + this.b + c + d);
+  this.a + this.b + c + d; // 45
 }
 callFunc2.call({ a: 10, b: 20 }, 5, 10); // If function's args expected.
+
+// --------------------------------------------------------------------------->>
+
+// F. apply() method:
+
+// If function's args not expected.
+function applyFunc1() {
+  this.a + this.b; // 30
+}
+applyFunc1.apply({ a: 10, b: 20 }); // If function's args not expected.
+
+// If function's args expected.
+function applyFunc2(c, d) {
+  this.a + this.b + c + d; // 45
+}
+applyFunc2.apply({ a: 10, b: 20 }, [5, 10]); // If function's args expected.
 
 // --------------------------------------------------------------------------->>
