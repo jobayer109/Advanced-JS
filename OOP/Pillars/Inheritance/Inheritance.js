@@ -133,9 +133,24 @@ Object.keys(person); // []; we can't access the keys of the object.
 
 // -----------------------------------------------------------------------------<<
 
+// Constructor prototype (Ex: Array.prototype)
 const arr = [];
-arr;
+arr; // []
 
 Array.prototype.myMethod = function method() {
   console.log("My constructor method");
 };
+
+/*
+        arr
+        []
+
+        length: 0
+        [[Prototype]]: Array(0)
+        myMethod: ƒ method()     // This is the function that we created
+        [[Prototype]]: Object
+
+
+*/
+
+// -----------------------------------------------------------------------------<<
