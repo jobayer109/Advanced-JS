@@ -2,23 +2,28 @@
     Topics:
     ----------------------------------------
         A. Prototype and Prototypical inheritance. (আদিরূপ)  
-        B. 
+        B. Multi level prototypes.
         C. 
 
 
     Notes:
-    ----------------------------------------
+    ------
         A. Prototype and Prototypical inheritance:
         ------------------------------------------
           * Prototype means parent class.
           * In JS, every class has a prototype that means parent class.
-          * But, prototype hasn't any prototype like "object's" prototype is "Object", but 
-            "Object" has no prototype. 
+          * But, prototype (parent class) hasn't any prototype like "object's" prototype 
+            is "Object", but "Object" has no prototype.
+          * Examples are written below.
           
           
-        B. 
+        B. Multi level prototypes:
         ----------------------------------
-          *  
+          1. String prototype.
+                string -> String (constructor) -> Object. 
+
+          2. Array prototype.
+                array -> Array (constructor) -> Object.  
 
 
         C. 

@@ -2,6 +2,22 @@
     Topics:
         A. Normal function declaration (addition, subtraction operation)
 
+
+    Notes:
+    ------
+      1. In JavaScript, functions are indeed objects.
+
+      2. This is one of the unique and powerful features of the language.
+
+      3. Functions in JavaScript are first-class objects. It can be -----
+          * Assigned to variables, properties, or array elements.
+          * Passed as arguments to other functions.
+          * Returned from other functions.
+          * Created dynamically at runtime.
+          
+          Example is written below ----|>
+
+
 */
 // --------------------------------------------------------------------------->>
 
