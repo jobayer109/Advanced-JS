@@ -1,3 +1,17 @@
+/*
+  Topics:
+  ----------------
+      A. Declare and initialize your variables at the top.
+      B. Beware of recursion overuse.
+      C. Be efficient with DOM manipulations.
+      D. Make use of shorthand notation (Object Literals).
+      E. Use Strict Mode to catch silent errors
+
+
+
+
+*/
+
 // 1. Declare and initialize your variables at the top
 
 var n = 10;

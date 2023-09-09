@@ -116,9 +116,6 @@ Consequently, when we use objects b and c as keys in object a, both are transfor
 [] == ![]; // true
 [] == []; // false
 
-[] === ![]; // false
-[] === []; // false
-
 // ------------------------------------------------------------------->>
 
 // Closure
