@@ -4,6 +4,7 @@
         A. Prototype and Prototypical inheritance. (আদিরূপ)  
         B. Multi level prototypes.
         C. Property descriptor.
+        D. Constructor prototype (Ex: Array.prototype).
 
 
     Notes:
@@ -28,8 +29,23 @@
 
         C. Property descriptor:
         -----------------------
-          * Object.defineProperty("object refer", "property name", {"write the 
-            descriptor"})
+          * Object.defineProperty("object name", "property name", 
+                {
+                    writable: true,    // we can set 'false'
+                    enumerable: true,  // we can set 'false'
+                    configurable: true // we can set 'false'
+                    value: 'Jobayer',  // This is default value that we can set.
+                })
+
+          Examples are written below.
+
+
+        D. Constructor prototype (Ex: Array.prototype):
+        -----------------------------------------------
+          * Every string, array, object are belong under a paren class (prototype).
+          * If we expand the console.log of an array, we can see the created method or 
+            object.
+          * We can do this using -> "Array.prototype.myFunc = function method(){}"
 
           Examples are written below.
 */
@@ -68,6 +84,9 @@ true
 
 ----------------------------------------------------------<<
 */
+//
+//
+//
 
 //  C. Property descriptor:
 const person = {
@@ -76,11 +95,11 @@ const person = {
 
 person.name; // Jobayer
 
-//---------------------<
+//--------------------------------<
 
 person.__proto__; // {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
 
-//---------------------<
+//--------------------------------<
 
 // Get property descriptor for a property of an object
 Object.getOwnPropertyDescriptor(person, "name"); // Output below
@@ -94,7 +113,7 @@ Object.getOwnPropertyDescriptor(person, "name"); // Output below
         [[Prototype]]: Object
 */
 
-//---------------------<
+//---------------------------------<
 
 // Modify the property descriptor of a property.
 const modified = Object.defineProperty(person, "name", {
@@ -111,3 +130,12 @@ person.name = "Taima"; // Can't change the previous value "Jobayer"
 person.name; // output: "Jobayer" instead of "Taima"
 
 Object.keys(person); // []; we can't access the keys of the object.
+
+// -----------------------------------------------------------------------------<<
+
+const arr = [];
+arr;
+
+Array.prototype.myMethod = function method() {
+  console.log("My constructor method");
+};
