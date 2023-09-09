@@ -93,3 +93,21 @@ Object.getOwnPropertyDescriptor(person, "name"); // Output below
         }
         [[Prototype]]: Object
 */
+
+//---------------------<
+
+// Modify the property descriptor of a property.
+const modified = Object.defineProperty(person, "name", {
+  writable: false,
+  enumerable: false,
+  configurable: false,
+  //   value: "Mr. Ahmed" // we can set a default value also.
+});
+
+modified; // {name: 'Jobayer'}
+
+person.name = "Taima"; // Can't change the previous value "Jobayer"
+
+person.name; // output: "Jobayer" instead of "Taima"
+
+Object.keys(person); // []; we can't access the keys of the object.
