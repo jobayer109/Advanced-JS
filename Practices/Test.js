@@ -212,7 +212,7 @@ result; // [496, 495, 485, 478, 473, 434, 429, 394, 389, 362, 360, 215];
 
 // Assigning a function to a variable
 const greets = function (name) {
-  console.log(`Hello,  ${name}!`);
+  `Hello,  ${name}!`;
 };
 
 // Calling the function
@@ -221,5 +221,7 @@ greets("Jobayer"); // Output: Hello, John!
 // Functions are objects, so you can also add properties to them
 greets.message = "Welcome object"; // Adding a property to the function
 
-console.log(greets.message); // Output: Welcome
-greets();
+greets.message; // Output: Welcome
+greets; // [Function: greets] { message: 'Welcome object' }
+
+// ------------------------------------------------------------------->>

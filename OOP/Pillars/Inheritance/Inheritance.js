@@ -3,7 +3,7 @@
     ----------------------------------------
         A. Prototype and Prototypical inheritance. (আদিরূপ)  
         B. Multi level prototypes.
-        C. 
+        C. Property descriptor.
 
 
     Notes:
@@ -26,9 +26,12 @@
                 array -> Array (constructor) -> Object.  
 
 
-        C. 
-        ------------------------------
-          * 
+        C. Property descriptor:
+        -----------------------
+          * Object.defineProperty("object refer", "property name", {"write the 
+            descriptor"})
+
+          Examples are written below.
 */
 
 // ------------------------------------------------------------------------->>
@@ -64,4 +67,29 @@ Object.getPrototypeOf(obj) === Object.getPrototypeOf(obj2)
 true
 
 ----------------------------------------------------------<<
+*/
+
+//  C. Property descriptor:
+const person = {
+  name: "Jobayer",
+};
+
+person.name; // Jobayer
+
+//---------------------<
+
+person.__proto__; // {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+
+//---------------------<
+
+// Get property descriptor for a property of an object
+Object.getOwnPropertyDescriptor(person, "name"); // Output below
+/*
+        {
+            value: 'Jobayer', 
+            writable: true, 
+            enumerable: true, 
+            configurable: true
+        }
+        [[Prototype]]: Object
 */
