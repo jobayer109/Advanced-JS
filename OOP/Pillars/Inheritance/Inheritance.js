@@ -5,6 +5,7 @@
         B. Multi level prototypes.
         C. Property descriptor.
         D. Constructor prototype (Ex: Array.prototype).
+        E. Instance vs Prototype Members in JS.
 
 
     Notes:
@@ -46,6 +47,16 @@
           * If we expand the console.log of an array, we can see the created method or 
             object.
           * We can do this using -> "Array.prototype.myFunc = function method(){}"
+
+          Examples are written below.
+
+
+        E. Instance vs Prototype Members in JS:
+        ---------------------------------------
+          * Instance means own the body part of a function or object. It's called instance 
+            members.
+          * On execution process, JS engine firstly search the method in it's own 
+            instance, Otherwise it moves to it's parent class; that means it's prototype. 
 
           Examples are written below.
 */
@@ -138,7 +149,7 @@ const arr = [];
 arr; // []
 
 Array.prototype.myMethod = function method() {
-  console.log("My constructor method");
+  return "My constructor method";
 };
 
 /*
@@ -152,5 +163,23 @@ Array.prototype.myMethod = function method() {
 
 
 */
+
+// -----------------------------------------------------------------------------<<
+
+//  E. Instance vs Prototype Members in JS.
+
+const Square = function (width) {
+  this.width = width;
+};
+
+Square.prototype = {
+  draw: function () {
+    console.log(width);
+  },
+};
+
+const sqr1 = new Square(10);
+
+const sqr2 = new Square(20);
 
 // -----------------------------------------------------------------------------<<
