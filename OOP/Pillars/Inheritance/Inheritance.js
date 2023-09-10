@@ -5,7 +5,8 @@
         B. Multi level prototypes.
         C. Property descriptor.
         D. Constructor prototype (Ex: Array.prototype).
-        E. Instance vs Prototype Members in JS.
+        E. Instance vs Prototype Members 
+        F. Using Instance and Prototype Members 
 
 
     Notes:
@@ -51,14 +52,20 @@
           Examples are written below.
 
 
-        E. Instance vs Prototype Members in JS:
-        ---------------------------------------
+        E. Instance vs Prototype Members:
+        --------------------------------
           * Instance means own the body part of a function or object. It's called instance 
             members.
           * On execution process, JS engine firstly search the method in it's own 
-            instance, Otherwise it moves to it's parent class; that means it's prototype. 
+            instance, Otherwise it moves to it's parent class; that means to it's 
+            prototype. 
 
-          Examples are written below.
+
+        F. Using Instance and Prototype Members:
+        ---------------------------------------
+          * We can call prototype functions from instance function. Similarly, instance 
+            function from prototype function scope.
+
 */
 
 // ------------------------------------------------------------------------->>
@@ -169,17 +176,49 @@ Array.prototype.myMethod = function method() {
 //  E. Instance vs Prototype Members in JS.
 
 const Square = function (width) {
+  // Instance members cell
   this.width = width;
 };
 
 Square.prototype = {
-  draw: function () {
-    console.log(width);
+  // Prototype members cell
+  draw: function (width) {
+    console.log(this.width);
+  },
+  toString: function () {
+    // function overwrite process
+    console.log("The width is = " + this.width);
   },
 };
 
 const sqr1 = new Square(10);
-
 const sqr2 = new Square(20);
 
+// -----------------------------------------------------------------------------<<
+
+// Using Instance and Prototype Members
+const Squares = function (width) {
+  // Instance members cell
+  this.width = width;
+
+  this.getWidth = function () {
+    console.log("The width is = " + this.width);
+    // this.draws();
+  };
+};
+
+Squares.prototype = {
+  // Prototype members cell
+  draws: function () {
+    console.log("Draw function has called");
+    this.getWidth();
+  },
+  toString: function () {
+    // function overwrite process
+    console.log("The width is = " + this.width);
+  },
+};
+
+const sqr3 = new Squares(30);
+const sqr4 = new Squares(90);
 // -----------------------------------------------------------------------------<<
