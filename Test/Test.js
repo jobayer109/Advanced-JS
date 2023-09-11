@@ -225,3 +225,5 @@ greets.message; // Output: Welcome
 greets; // [Function: greets] { message: 'Welcome object' }
 
 // ------------------------------------------------------------------->>
+const str = "   I love      Bangladesh    ";
+// console.log(str.trim());
