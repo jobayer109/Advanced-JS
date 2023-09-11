@@ -20,7 +20,9 @@
           2. To get all properties name of an object we should apply "for-in" loop. It 
              returns all properties of Instance and Prototype member cell.
 
-          
+          3. By using "hasOwnProperty" method, we can confirm that the property is existed 
+             or not existed. It returns true / false.
+             Ex: sqr5.hasOwnProperty("width"); // false
           
         B. 
         ----------------------------------
