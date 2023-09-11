@@ -30,8 +30,8 @@ const result1 = getNameInUpperCase();
 
 // Way-2: Using OR || operator.
 const getNameInLowerCase = (name) => {
-  return (name || "").toLowerCase();
+  return (name || "").toString().toLowerCase();
 };
-const result2 = getNameInLowerCase("JOBAYER");
-const result3 = getNameInLowerCase();
-// console.log(result2, result3);
+const result2 = getNameInLowerCase("Hello");
+// const result3 = getNameInLowerCase();
+console.log(result2);
