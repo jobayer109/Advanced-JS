@@ -5,8 +5,8 @@
         B. Reset Constructor After Inheritance
         C. Calling Super With Call Method
         D. Creating Extends Function to avoid code duplication.
-        E. 
-        F.  
+        E. Method Overriding
+       
 
 
     Notes:
@@ -21,18 +21,26 @@
         --------------------------------------
           * 
 
-
         C. Calling Super With Call Method:
         ---------------------------------
           * If we want use anything from Parent class to child class. We should use 
            call() / bind() method to access it. like Shape.call(this (refer the obj), 
            color (parameter)).
-          *
          
          
         D. Creating Extends Function to avoid code duplication:
         -------------------------------------------------------
           * Follow the code in the below.
+         
+         
+        E. Method Overriding:
+        -------------------------------------------------------
+          * If we want to change / override the Parent class's method, we should the 
+            Reset code after the extend function.  
+          * But, I have another way to access the Parent method in Reset function 
+            that apply after the extend function 
+          * We can handle both type of operations in the Reset function.
+          * Code example below.
 
 
 
@@ -45,6 +53,7 @@
     B. Reset Constructor After Inheritance.
     C. Calling Super With Call Method.
     D. Creating Extends Function to avoid code duplication.
+    E. Method Overriding
 
     All points are applied in the code below...
 */
@@ -61,7 +70,7 @@ const Shape = function (color) {
 
 Shape.prototype = {
   common: function () {
-    console.log("Common function");
+    console.log("This common method");
   },
 };
 
@@ -82,6 +91,7 @@ Sqr.prototype.draw = function () {
 };
 
 /*
+----> Reset Constructor After Inheritance
         Sqr.prototype = {
           draw: function () {
           console.log("Draw function executed");
@@ -108,6 +118,12 @@ const Circle = function (radius, color) {
 // Circle.prototype = Object.create(Shape.prototype);
 // Circle.prototype.constructor = Circle; // নিজের সত্ত্বাকে (constructor) পুনরায় ফিরিয়ে আনা।
 extend(Shape, Circle);
+
+// Method Overriding and executing Parent class's function.
+Circle.prototype.common = function () {
+  Shape.prototype.common.call(this); // Accessing Parent class's method.
+  console.log("I am circle and I'm overriding function");
+};
 
 Circle.prototype.draw = function () {
   console.log("Circle function executed");
