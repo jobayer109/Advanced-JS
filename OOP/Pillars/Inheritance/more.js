@@ -42,7 +42,7 @@ const Rectangle = function (height) {
   // Instance members cell
   this.height = height;
 
-  this.getWidth = function () {
+  this.getHeight = function () {
     console.log("The height is = " + this.height);
     // this.draw(); // we can call / get access of prototype members.
   };
@@ -52,7 +52,7 @@ Rectangle.prototype = {
   // Prototype members cell
   draw: function () {
     console.log("Draw function has called");
-    this.getWidth(); // we can call / get access of instance members.
+    this.getHeight(); // we can call / get access of instance members.
   },
   toString: function () {
     // function overwrite process
@@ -70,5 +70,11 @@ Object.keys(sqr5); //  ['height', 'getWidth']; They are part of Instance member
 for (let keys in sqr5) {
   keys; // height, getWidth, draw, toString
 }
+
+// Check properties using "hasOwnProperty" method: It returns true/ false.
+sqr5.hasOwnProperty("width"); // false
+sqr5.hasOwnProperty("height"); // true
+sqr5.hasOwnProperty("toString"); // false; Bcz, it's a part of prototype.
+sqr5.hasOwnProperty("getHeight"); // true
 
 // -----------------------------------------------------------------------------<<
