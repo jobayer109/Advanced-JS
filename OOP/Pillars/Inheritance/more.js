@@ -37,4 +37,38 @@
 
 // ------------------------------------------------------------------------->>
 
+// Iterate / Traverse Object and HasOwnProperty method.
+const Rectangle = function (height) {
+  // Instance members cell
+  this.height = height;
+
+  this.getWidth = function () {
+    console.log("The height is = " + this.height);
+    // this.draw(); // we can call / get access of prototype members.
+  };
+};
+
+Rectangle.prototype = {
+  // Prototype members cell
+  draw: function () {
+    console.log("Draw function has called");
+    this.getWidth(); // we can call / get access of instance members.
+  },
+  toString: function () {
+    // function overwrite process
+    console.log("The height is = " + this.height);
+  },
+};
+
+const sqr5 = new Rectangle(30);
+const sqr6 = new Rectangle(90);
+
+// Get keys (properties) using Object constructor:
+Object.keys(sqr5); //  ['height', 'getWidth']; They are part of Instance members.
+
+// Get all keys (properties) of the object using "for-in" loop.
+for (let keys in sqr5) {
+  keys; // height, getWidth, draw, toString
+}
+
 // -----------------------------------------------------------------------------<<
