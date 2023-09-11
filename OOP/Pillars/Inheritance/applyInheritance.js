@@ -3,7 +3,7 @@
     ----------------------------------------
         A. First Implement of Prototypical Inheritance 
         B. Reset Constructor After Inheritance
-        C. 
+        C. Calling Super With Call Method
         D. 
         E. 
         F.  
@@ -22,9 +22,12 @@
           * 
 
 
-        C.
-        -----------------------
-          * 
+        C. Calling Super With Call Method:
+        ---------------------------------
+          * If we want use anything from Parent class to child class. We should use 
+           call() / bind() method to access it. like Shape.call(this (refer the obj), 
+           color (parameter)).
+          *
 
 
 
@@ -33,7 +36,9 @@
 // ------------------------------------------------------------------------->>
 
 // A. First Implement of Prototypical Inheritance
-const Shape = function () {};
+const Shape = function (color) {
+  this.color = color;
+};
 
 Shape.prototype = {
   common: function () {
@@ -42,7 +47,8 @@ Shape.prototype = {
 };
 
 // Prototypical Inheritance of Square
-const Sqr = function () {
+const Sqr = function (color) {
+  Shape.call(this, color); // Super calling
   console.log("Square initial operation");
 };
 
@@ -86,7 +92,7 @@ Circle.prototype.draw = function () {
 };
 
 // Output
-const sq = new Sqr();
+const sq = new Sqr("green");
 const shape = new Shape();
 // const circle = new Circle();
 
