@@ -4,10 +4,7 @@
         A. Iterate / Traverse Object and HasOwnProperty method. 
         B. Don't Overwrite Built in Prototypes
         C. 
-        D. 
-        E. 
-        F.  
-
+       
 
     Notes:
     ------
@@ -27,9 +24,9 @@
           
         B. Don't Overwrite Built in Prototypes:
         --------------------------------------
-          *  We should not overwrite or change the Built in prototype. Like: Array.prototype.hudai = 
-             function () { }. It works. But it's harmful for the project. We should change 
-             our own Prototypes, not Built in Prototypes.
+          *  We should not overwrite or change the Built in prototype. Like: Array.
+             prototype.hudai = function () { }. It works. But it's harmful for the 
+             project. We should change our own Prototypes, not Built in Prototypes.
 
 
         C.
