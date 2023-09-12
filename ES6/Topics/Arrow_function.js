@@ -84,6 +84,8 @@ const anotherObj = {
 };
 // anotherObj.method();
 
+//---------------------------<
+
 // Arrow function -------------- with normal function.
 const anotherObject = {
   name: "Jobayer Ahmed",
@@ -92,11 +94,27 @@ const anotherObject = {
     console.log(this.name); // Jobayer Ahmed;
     setTimeout(() => {
       console.log(this); // Refer it's parent object (anotherObject)
-      console.log(`Hello, ${this.name}`); // But there, Hello, undefined
+      console.log(`Hello, ${this.name}`); // Hello, Jobayer Ahmed
     }, 2000);
   },
 };
-anotherObject.method();
+// anotherObject.method();
+
+//---------------------------<
+
+// Arrow function -------------- "without normal function".
+const arrowObject = {
+  name: "Jobayer Ahmed",
+  method: () => {
+    console.log(this); // Refer window parent object
+    console.log(this.name); // undefined
+    setTimeout(() => {
+      console.log(this); // Refer window parent object
+      console.log(`Hello, ${this.name}`); // Hello, undefined
+    }, 2000);
+  },
+};
+// arrowObject.method();
 
 //---------------------------<
 
