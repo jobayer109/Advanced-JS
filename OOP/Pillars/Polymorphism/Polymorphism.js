@@ -88,3 +88,17 @@ const circle = new Circle(10, "red");
 const shape = new Shape("Indigo");
 
 //------------------------------------<<
+
+//  Array traverse to check Polymorphism
+
+const shapes = [sqr, circle, shape];
+
+// "For-in" loop to get all keys of the array
+for (let i in shapes) {
+  shapes[i].common();
+}
+
+// "For-of" loop to get all keys of the array
+for (let i of shapes) {
+  i.common();
+}
