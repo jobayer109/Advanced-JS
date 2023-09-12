@@ -84,6 +84,20 @@ const anotherObj = {
 };
 // anotherObj.method();
 
+// Arrow function -------------- with normal function.
+const anotherObject = {
+  name: "Jobayer Ahmed",
+  method: function () {
+    console.log(this); // Refer it's parent object (anotherObject)
+    console.log(this.name); // Jobayer Ahmed;
+    setTimeout(() => {
+      console.log(this); // Refer it's parent object (anotherObject)
+      console.log(`Hello, ${this.name}`); // But there, Hello, undefined
+    }, 2000);
+  },
+};
+anotherObject.method();
+
 //---------------------------<
 
 // Normal function and "this" keyword.
