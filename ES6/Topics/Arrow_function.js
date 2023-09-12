@@ -9,7 +9,10 @@
     -------
         B. Arrow function and "this" keyword:
         -------------------------------------
-            * 
+            * In arrow function, "this" refers the window / global parent object. 
+            * Can't apply -> bind(), call(), apply() in arrow function. 
+            * Arrow function a "this" create, assign, change korar capacity nei.
+            * We can't set any context outside of the function.  
 */
 
 //----------------------------------------------------------------------->>
@@ -35,3 +38,37 @@ const multiArrow = (a, b) => {
 };
 
 //----------------------------------------------------------------------->>
+
+// B. Arrow function and "this" keyword:
+const arrowTest = () => {
+  console.log(this);
+};
+// arrowTest();
+
+// "this" keyword's behavior in Object of arrow function
+const arrowObj = {
+  name: "Jobayer",
+  print: () => {
+    console.log(this); // "this" refer the window / global object
+    console.log(this.name); // undefined
+  },
+};
+// arrowObj.print();
+
+//---------------------------<
+
+// Normal function and "this" keyword.
+function normalTest() {
+  console.log(this);
+}
+// normalTest();
+
+// "this" keyword's behavior in Object of normal function
+const normalObj = {
+  name: "Ahmed",
+  print: function () {
+    console.log(this); // "this" refer it's parent object
+    console.log(this.name); // Ahmed
+  },
+};
+// normalObj.print();
