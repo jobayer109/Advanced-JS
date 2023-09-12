@@ -10,11 +10,11 @@
     -------
         B. Arrow function and "this" keyword:
         -------------------------------------
-            * In arrow function, "this" refers the window / global parent object. 
-            * Can't apply -> bind(), call(), apply() in arrow function. 
+            * In arrow function, "this" refers the window / global parent object.
+            * Arrow function always refer it's parent "this". (important)   
+            * Can't apply -> bind(), call(), apply()  to set "this"
             * Arrow function a "this" create, assign, change korar capacity nei.
             * We can't set any context outside of the function.  
-           
            
            
         C. Normal function and "this" keyword:
@@ -133,3 +133,5 @@ const normalObj = {
   },
 };
 // normalObj.print();
+
+//----------------------------------------------------------------------->>
