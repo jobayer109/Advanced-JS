@@ -3,7 +3,8 @@
     ----------------------------------------
         A. Iterate / Traverse Object and HasOwnProperty method. 
         B. Don't Overwrite Built in Prototypes
-        C. 
+        C. When to use Inheritance ?
+        D. Composition vs Inheritance.
        
 
     Notes:
@@ -14,11 +15,11 @@
              Instance cell, not prototype cell property.
              Ex: Object.keys(sqr1) 
 
-          * To get all properties name of an object we should apply "for-in" loop. It 
-             returns all properties of Instance and Prototype member cell.
+          * To get all properties name of an object we should apply "for-in" loop. 
+             It returns all properties of Instance and Prototype member cell.
 
-          * By using "hasOwnProperty" method, we can confirm that the property is existed 
-             or not existed. It returns true / false.
+          * By using "hasOwnProperty" method, we can confirm that the property is 
+             existed or not existed. It returns true / false.
              Ex: sqr5.hasOwnProperty("width"); // false
           
           
@@ -29,9 +30,19 @@
              project. We should change our own Prototypes, not Built in Prototypes.
 
 
-        C.
-        -----------------------
-          * 
+        C. When to use Inheritance ?
+        ----------------------------
+          * To avoid code duplication.
+          * When prototype layer less than 3. But 2 layer is best.
+          * More than 3 layers code is difficult to maintain and update.
+         
+         
+        D. Composition vs Inheritance.
+        ------------------------------
+          * The main difference is in there use case. 
+          * If the layers more than 2, should use Composition.
+          * In Composition, methods are converted to object.
+       **** we can use both Composition and inheritance at the same time. Amazing!!
 
 
 
@@ -87,3 +98,5 @@ Array.prototype.hudai = function () {}; // Don't do this
 Array.prototype.ownPrototype = function () {}; // Do this
 
 // -----------------------------------------------------------------------------<<
+
+// D. Composition and Inheritance:
