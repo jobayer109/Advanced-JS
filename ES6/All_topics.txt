@@ -1,0 +1,33 @@
+/*
+
+    ES6 Topics:
+    -----------
+        1. Template string 
+        2. Arrow function
+        3. Arrow function and "this". What matters ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
