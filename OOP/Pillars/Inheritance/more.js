@@ -107,6 +107,7 @@ function mixin(target, ...sources) {
   target.prototype = Object.assign(target, ...sources);
 }
 
+// converted method to objects for easy access for Composition.
 const canWalk = {
   walk: function () {
     console.log("Walking...");
