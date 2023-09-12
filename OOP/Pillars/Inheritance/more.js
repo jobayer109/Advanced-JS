@@ -100,3 +100,56 @@ Array.prototype.ownPrototype = function () {}; // Do this
 // -----------------------------------------------------------------------------<<
 
 // D. Composition and Inheritance:
+
+// The mixin function will control the code repetition:
+
+function mixin(target, ...sources) {
+  target.prototype = Object.assign(target, ...sources);
+}
+
+const canWalk = {
+  walk: function () {
+    console.log("Walking...");
+  },
+};
+
+const canEat = {
+  eat: function () {
+    console.log("Eating...");
+  },
+};
+
+const canSwim = {
+  swim: function () {
+    console.log("Swimming...");
+  },
+};
+
+// Composition applying process.
+const persons = Object.assign({}, canWalk, canEat);
+console.log(persons);
+
+// Inheritance applying process of Persons:
+function Persons(name) {
+  this.name = name;
+}
+
+// Bad code
+// Persons.prototype = Object.assign(Persons.prototype, canWalk, canEat);
+
+// Best practice
+mixin(Persons.prototype, canEat, canWalk);
+const per = new Persons("Jobayer");
+
+// Inheritance applying process of GoldFish:
+
+function GoldFish(color) {
+  this.color = color;
+}
+
+// Bad code
+// GoldFish.prototype = Object.assign(GoldFish.prototype, canEat, canSwim);
+
+// Best practice
+mixin(GoldFish.prototype, canEat, canSwim);
+const gold = new GoldFish("golden");
