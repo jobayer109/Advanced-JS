@@ -35,7 +35,7 @@ const res2 = sqr(5); // 25
 
 // Example - 1:----------------------
 const greet = (name = "Mr. Jobayer", msg = "good night") => {
-  console.log(name.length); // 11
+  name.length; // 11
   return `${name}, ${msg}!`;
 };
 const res3 = greet(); // Mr. Jobayer, good night!
@@ -43,8 +43,9 @@ const res4 = greet(); // Mr. Jobayer, good night!
 
 // Example - 2:----------------- null and undefined issue
 const greetNull = (name = "Mr. Jobayer", msg = "good night") => {
-  console.log(name.length);
+  name.length;
   // TypeError: Cannot read properties of null (reading 'length')
   return `${name}, ${msg}!`;
 };
-const res5 = greetNull(null, "good morning"); // error
+// Output:
+// const res5 = greetNull(null, "good morning"); // error
