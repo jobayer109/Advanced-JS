@@ -5,6 +5,11 @@
         1. Template string 
         2. Arrow function
         3. Arrow function and "this". What matters ?
+        4. Some object's updates.
+        5. Rest and spread operator.
+        6. Default parameter.
+        7. Convert (Object -> Array and Array -> Object)
+        8. 
 
 
 
