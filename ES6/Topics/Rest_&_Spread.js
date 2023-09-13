@@ -69,9 +69,9 @@ const obj = {
 };
 // Copy of reference
 const obj2 = obj; // Copy of reference
-console.log(obj2); // {a: 10, b: 56, c: 65}
+obj2; // {a: 10, b: 56, c: 65}
 
 // Spread operator. Genuine copy.
 const obj3 = { ...obj };
 obj3.d = 12;
-console.log(obj3); // {a: 10, b: 56, c: 65, d: 12}
+obj3; // {a: 10, b: 56, c: 65, d: 12}
