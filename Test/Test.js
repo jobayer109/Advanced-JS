@@ -240,15 +240,13 @@ i; // 11
 
 // ------------------------------------------------------------------->>
 
-let j = 0;
-while (j <= 10) {
-  // j; // Infinity loop
-  j += false;
-  // j; // Infinity loop
-}
-// console.log(j); //
+// let j = 0;
+// while (j <= 10) {
+//   // j; // Infinity loop
+//   j += false;
+//   // j; // Infinity loop
+// }
+// // console.log(j); //
 
 // ------------------------------------------------------------------->>
-console.log("Problem and problem");
-console.log("Problem and problem");
 console.log("Problem and problem");
