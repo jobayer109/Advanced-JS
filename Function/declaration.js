@@ -15,6 +15,11 @@
           * Returned from other functions.
           * Created dynamically at runtime.
           
+      4. Function expressions and declarations serve the same purpose, but their 
+         use-cases differ. While function declarations are hoisted, making them 
+         callable before their declaration, function expressions aren’t. Knowing 
+         when to use which is crucial for clean code.
+          
           Example is written below ----|>
 
 
