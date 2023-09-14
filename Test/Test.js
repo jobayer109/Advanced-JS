@@ -225,5 +225,17 @@ greets.message; // Output: Welcome
 greets; // [Function: greets] { message: 'Welcome object' }
 
 // ------------------------------------------------------------------->>
+
 const str = "   I love      Bangladesh    ";
 // console.log(str.trim());
+
+// ------------------------------------------------------------------->>
+
+let i = 0;
+while (i <= 10) {
+  i; // Print loop result successfully
+  i += true;
+}
+i; // 11
+
+// ------------------------------------------------------------------->>
