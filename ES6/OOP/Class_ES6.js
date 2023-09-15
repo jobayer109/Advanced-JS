@@ -14,6 +14,7 @@
              duplication.
            * class name is a --> "function". 
            * when that class declares with "new" keyword then --> "object".
+           * when that class declares with "new" keyword then --> "object".
 */
 
 //----------------------------------------------------------------------->>
