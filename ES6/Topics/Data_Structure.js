@@ -4,6 +4,7 @@
         A. Data structure info
         B. Set (data structure)  
         C. Map (data structure)
+        D. WeakSet (only for objet)
         
 
     Notes:
@@ -31,6 +32,15 @@
             * Can be set any kinds of primitive data and objects.
             * To set anything there is set() method, instead of add() method.
             * for-of loop is something exceptional. Be aware about that.
+        
+        
+        D. WeakSet (only for objet):
+        ---------------------------
+            * It deals with object, not for another data types.
+            * If we reassign an object with "null". Normal "Set" can't replace it.
+            * Using "weakSet", we can resolved the problem.
+            * Allowed methods: add(), has(), delete()
+            * We can't apply iteration.
 */
 
 //----------------------------------------------------------------------->>
@@ -71,3 +81,14 @@ for (let [k, v] of map) {
 // There are more useful methods in map data structure
 
 //----------------------------------------------------------------------->>
+
+//  D. WeakSet (only for objet):
+const x = { x: 10 };
+const y = { y: 20 };
+
+const weakSet = new WeakSet([x, y]); // Read only object.
+
+// Methods apply:
+const z = { z: 30 };
+weakSet.add(z);
+console.log(weakSet);
