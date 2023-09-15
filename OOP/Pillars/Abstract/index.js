@@ -19,7 +19,7 @@
          B. 'this' keyword:
          -----------------
             1. This keyword always refers an object.
-            2. If it can't access any object, it refer window object.
+            2. If it can't access any object, it refer window/ global object.
 
 
          D. "new" keyword:

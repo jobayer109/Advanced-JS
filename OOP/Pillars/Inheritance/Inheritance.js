@@ -15,7 +15,8 @@
         ------------------------------------------
           * Prototype means parent class.
           * In JS, every class has a prototype that means parent class.
-          * But, prototype (parent class) hasn't any prototype like "object's" prototype 
+          * But, prototype (parent class) hasn't any prototype like "object's" 
+            prototype 
             is "Object", but "Object" has no prototype.
           * Examples are written below.
           
