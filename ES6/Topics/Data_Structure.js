@@ -47,11 +47,10 @@
         
         D. WeakMap (only for objet):
         ---------------------------
-            * It deals with object, not for another data types.
-            * If we reassign an object with "null". Normal "Set" can't replace it.
-            * Using "weakSet", we can resolved the problem.
-            * Allowed methods: add(), has(), delete()
-            * We can't apply iteration.
+            * As same as weakSet.
+            * Although The constructing syntax is different of "Set" and "Map", they 
+              serve the same purpose. And that is the objet reference issue in 
+              memory.
 */
 
 //----------------------------------------------------------------------->>
@@ -124,4 +123,12 @@ weakSet.delete(d);
 weakSet; // output: It works perfectly.
 //----------------------------------------------------------------------->>
 
-//
+// WeakMap (only for objet)
+
+let weakMap = new WeakMap([
+  [m, 45],
+  [n, 65],
+  [o, 99],
+]);
+
+// console.log(weakMap);
