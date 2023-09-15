@@ -2,8 +2,8 @@
     Topics:
     -------
         A. Definition of 'Class'.
-        B. 
-        C. 
+        B. Object oriented syntax (ES5)
+        C. Object oriented syntax (ES6)
 
 
     Notes:
@@ -12,11 +12,13 @@
         -------------------------------------
            * Class is just a 'Factory' to create multiple object without code 
              duplication.
+           * class name is a --> "function". 
+           * when that class declares with "new" keyword then --> "object".
 */
 
 //----------------------------------------------------------------------->>
 
-//  Object oriented syntax (ES5)--------------------
+// B. Object oriented syntax (ES5)--------------------
 const rect = {
   width: 15,
   height: 12,
@@ -33,7 +35,7 @@ const result2 = rect.calculateRange(); // 54
 
 // ---------------------------------------------------------------------------->>
 
-//  Class function (ES6): Best practice--------------
+// C. Class function (ES6): Best practice_______________
 class Rect {
   constructor(width, height) {
     this.width = width;
@@ -48,8 +50,11 @@ class Rect {
   }
 }
 
-const res = new Rect(12, 15);
+const res = new Rect();
 res.calculateArea(12, 10); // 180
 res.calculateRange(12, 10); // 54
+
+typeof Rect; // function
+typeof res; // object
 
 // ---------------------------------------------------------------------------->>
