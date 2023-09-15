@@ -5,6 +5,7 @@
         B. Set (data structure)  
         C. Map (data structure)
         D. WeakSet (only for objet)
+        E. WeakMap 
         
 
     Notes:
@@ -35,6 +36,16 @@
         
         
         D. WeakSet (only for objet):
+        ---------------------------
+            * It deals with object, not for another data types.
+            * If we reassign an object with "null". Normal "Set" can't replace it. 
+              And output will as same as previous.
+            * Using "weakSet", we can resolved the problem.
+            * Allowed methods: add(), has(), delete()
+            * We can't apply iteration.
+        
+        
+        D. WeakMap (only for objet):
         ---------------------------
             * It deals with object, not for another data types.
             * If we reassign an object with "null". Normal "Set" can't replace it.
@@ -83,12 +94,34 @@ for (let [k, v] of map) {
 //----------------------------------------------------------------------->>
 
 //  D. WeakSet (only for objet):
+
+// Set's object reference issue.
+let p = { p: 40 };
+
+let set1 = new Set([15, 80, p]);
+
+p = null; // Reassign p with null
+
+set1; // Oh, still "p" object is here. this is unexpected.
+
+set1.has(p); // false. Okay. It says that value isn't in there, but still he returns the object. Why man ?
+
+//--------------------------------
+
+// Object reference issue resolved by weakSet.
 const x = { x: 10 };
 const y = { y: 20 };
+const d = { d: 22 };
 
-const weakSet = new WeakSet([x, y]); // Read only object.
+const weakSet = new WeakSet([x, y, d]); // Read only object.
 
 // Methods apply:
 const z = { z: 30 };
 weakSet.add(z);
-console.log(weakSet);
+weakSet; // output: It works perfectly.
+
+weakSet.delete(d);
+weakSet; // output: It works perfectly.
+//----------------------------------------------------------------------->>
+
+//
