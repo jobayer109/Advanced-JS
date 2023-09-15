@@ -14,7 +14,17 @@
              duplication.
            * class name is a --> "function". 
            * when that class declares with "new" keyword then --> "object".
-           * when that class declares with "new" keyword then --> "object".
+           * If we need to pass arguments should use "constructor" method. And   
+             define the parameter in that "constructor" method.
+           * When created methods inside the "class" not in the "constructor" 
+             method, they will set under the proto.
+           * If we don't want to set any 'methods / variables' under the "proto", 
+             that method should be write in the "constructor" method.
+           * Another way to not set any 'method / any primitive data' under the 
+             proto, normally we write the 'function expression / variables' in the 
+             "class" body. But the problem is, we should install the "Babel class 
+             plugin" in the project. Otherwise it won't work. But in the React.js 
+             project,we'll get this feature in built in way.  
 */
 
 //----------------------------------------------------------------------->>
