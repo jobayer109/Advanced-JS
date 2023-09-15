@@ -304,24 +304,40 @@ funcObj2.print();
 // ------------------------------------------------------------------->>
 
 // Difference between normal and arrow function use-case of "this"
-const object1 = {
-  y: "Tahmina",
-  apple: () => {
-    function print() {
-      const newArrow = () => {
-        console.log(this);
-      };
-      newArrow();
-    }
-    print();
-  },
-};
-object1.apple();
+// const object1 = {
+//   y: "Tahmina",
+//   apple: () => {
+//     function print() {
+//       function newArrow() {
+//         console.log(this);
+//       }
+//       newArrow();
+//     }
+//     print();
+//   },
+// };
 
+//----------------------
+const person = { nm: "John" };
+const sayHello = () => {
+  console.log(`Hello, ${person.nm}`);
+};
+
+sayHello(); // Outputs: Hello, undefined (this.name is undefined)
+
+//----------------------
+const persons = { nms: "John" };
+function sayHello1() {
+  console.log(`Hello, ${this.person.nms}`);
+}
+
+// sayHello1(); // Outputs: Hello, undefined (this.name is undefined)
+
+// ------------------------
 const object2 = {
   x: "Taima",
-  print1: function () {
-    let self = this;
+  print1() {
+    // let self = this;
     console.log(self);
     const z = "hello Z";
     const another = () => {
@@ -333,4 +349,27 @@ const object2 = {
     another();
   },
 };
-object2.print1();
+// object2.print1();
+
+// ------------------------------------------------------------------->>
+
+// Prototype and Prototypical inheritance
+const myArr = new Array();
+myArr.push(1);
+myArr.push(2);
+myArr.push(3);
+console.log(myArr);
+
+// ------------------------------------------------------------------->>
+
+function foo() {
+  console.log(this);
+}
+
+function callFoo(fn) {
+  fn();
+}
+
+let obj = { foo };
+
+callFoo(obj.foo);

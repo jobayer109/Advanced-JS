@@ -23,6 +23,12 @@
         * console.log is used for basic text-based logging, while console.dir is  
           used for exploring and inspecting the structure of JavaScript objects in a 
           more detailed and interactive manner. 
+
+      Blogs Notes:
+      ---------------------
+        * Closures are commonly used to create private variables and encapsulation in JavaScript.
+        * This allows you to achieve information hiding and avoid global namespace pollution.
+        * Closures are often used in scenarios such as event handlers, callbacks, and maintaining state in functional programming. 
        
 */
 
