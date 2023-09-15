@@ -6,9 +6,7 @@ const users = [
 ];
 
 // Array mapping
-const getNames = users.map(({ firstName, lastName }) => {
-  return `${firstName} ${lastName}`;
-});
+const getNames = users.map(({ firstName, lastName }) => `${firstName} ${lastName}`);
 // console.log(getNames);
 
 // custom implementation
@@ -22,10 +20,8 @@ for (let i = 0; i < users.length; i++) {
 // ------------------------------------------------------------->>
 
 // Array filtering
-const sumFilter = users.filter((acc, curr) => {
-  return acc.age === 10 ? acc[curr] : "No data found";
-});
-// console.log(sumFilter);
+const sumFilter = users.filter((x) => (x.age > 30 ? x : ""));
+console.log(sumFilter);
 
 // Custom implementation array filtering
 let filtered = [];
@@ -34,4 +30,8 @@ for (let i = 0; i < users.length; i++) {
     filtered = users[i];
   }
 }
-console.log(filtered);
+// console.log(filtered);
+
+// ------------------------------------------------------------->>
+
+// Array reducing
