@@ -9,7 +9,7 @@
         5. Rest and spread operator.
         6. Default parameter.
         7. Convert (Object -> Array and Array -> Object)
-        8. 
+        8. Class (OOP ES6)
 
 
 

@@ -249,4 +249,53 @@ i; // 11
 // // console.log(j); //
 
 // ------------------------------------------------------------------->>
-console.log("Problem and problem");
+
+// Functions:
+
+// Number: 1
+function func() {
+  console.log("I am function");
+}
+func();
+
+// Number: 2
+const func5 = function () {
+  console.log("I am function");
+};
+func5();
+
+// Number: 3
+const arrowFunc = () => console.log("I am function");
+arrowFunc();
+
+// Number: 4
+const arrowFunc1 = (a) => {
+  console.log("I am function");
+};
+arrowFunc1(3);
+
+// Number: 5 (in obj)
+
+const funcObj = {
+  print: function () {
+    console.log("I am function");
+  },
+};
+funcObj.print();
+
+// Number: 6 (in obj)
+const funcObj1 = {
+  print: () => {
+    console.log("I am function");
+  },
+};
+funcObj1.print();
+
+// Number: 7 (in obj)
+const funcObj2 = {
+  print() {
+    console.log("I am function");
+  },
+};
+
+funcObj2.print();

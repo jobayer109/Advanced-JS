@@ -4,6 +4,8 @@
         A. Definition of 'Class'.
         B. Object oriented syntax (ES5)
         C. Object oriented syntax (ES6)
+        D. Static method.
+        E. "this" keyword.
 
 
     Notes:
@@ -25,6 +27,19 @@
              "class" body. But the problem is, we should install the "Babel class 
              plugin" in the project. Otherwise it won't work. But in the React.js 
              project,we'll get this feature in built in way.  
+        
+        
+        D. Static method:
+        -------------------------------------
+           * Have to explore. 
+        
+        
+        E. "this" keyword:
+        -------------------------------------
+           * The "class" function use "strict" mode as native implementation.
+           * "class" prevents to access the window / global object automatically.
+           * If "this" can't access anything that it want, because of "class", it 
+             will return "undefined".
 */
 
 //----------------------------------------------------------------------->>
@@ -69,3 +84,15 @@ typeof Rect; // function
 typeof res; // object
 
 // ---------------------------------------------------------------------------->>
+
+// E. "this" keyword in "class" function_____________________
+
+// In normal constructor:
+function FullName {
+  draw: function() {
+    console.log(this);
+  };
+}
+
+const name1 = new FullName();
+console.log(name1.draw());
