@@ -24,3 +24,15 @@ const num = new Num();
 // console.log(num.getNum());
 
 // ------------------------------------------------------------------------->>
+
+console.log(foo());
+// let bar = "bar";
+var bar = "bar";
+
+function foo() {
+  return bar;
+}
+
+bar = "baz";
+
+console.log(foo());
