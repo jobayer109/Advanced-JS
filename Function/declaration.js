@@ -15,10 +15,15 @@
           * Returned from other functions.
           * Created dynamically at runtime.
           
-      4. Function expressions and declarations serve the same purpose, but their 
-         use-cases differ. While function declarations are hoisted, making them 
-         callable before their declaration, function expressions aren’t. Knowing 
-         when to use which is crucial for clean code.
+      4. Function expressions (normal expressions / arrow function) and declarations 
+         serve the same purpose, but their use-cases differ. While function 
+         declarations are hoisted, making them callable before their declaration, 
+         function expressions aren’t. Knowing when to use which is crucial for clean 
+         code.
+
+      5. Functions are always hoisted first. In whatever order the declarations of a 
+         function and a variable with the same name occur in your code, the function 
+         takes precedence, because it rises higher.
           
           Example is written below ----|>
 

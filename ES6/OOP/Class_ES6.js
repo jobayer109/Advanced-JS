@@ -5,7 +5,7 @@
         B. Object oriented syntax (ES5)
         C. Object oriented syntax (ES6)
         D. Static method.
-        E. "this" keyword.
+        E. "this" keyword's role in "class" function
 
 
     Notes:
@@ -14,7 +14,7 @@
         -------------------------------------
            * Class is just a 'Factory' to create multiple object without code 
              duplication.
-           * class name is a --> "function". 
+           * class is a --> "function". 
            * when that class declares with "new" keyword then --> "object".
            * If we need to pass arguments should use "constructor" method. And   
              define the parameter in that "constructor" method.
@@ -26,7 +26,8 @@
              proto, normally we write the 'function expression / variables' in the 
              "class" body. But the problem is, we should install the "Babel class 
              plugin" in the project. Otherwise it won't work. But in the React.js 
-             project,we'll get this feature in built in way.  
+             project,we'll get this feature in built in way.
+           * 
         
         
         D. Static method:
@@ -88,11 +89,11 @@ typeof res; // object
 // E. "this" keyword in "class" function_____________________
 
 // In normal constructor:
-function FullName {
-  draw: function() {
+function FullName() {
+  this.draw = function () {
     console.log(this);
   };
 }
 
 const name1 = new FullName();
-console.log(name1.draw());
+// console.log(name1.draw());
