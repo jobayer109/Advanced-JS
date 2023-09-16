@@ -46,9 +46,12 @@
         D. Constructor prototype (Ex: Array.prototype):
         -----------------------------------------------
           * Every string, array, object are belong under a paren class (prototype).
-          * If we expand the console.log of an array, we can see the created method or 
-            object.
+          * If we expand the console.log of an array, we can see the created method 
+            or object.
           * We can do this using -> "Array.prototype.myFunc = function method(){}"
+          * When you call a constructor function with the new keyword, it creates a 
+            new object and sets the this keyword to refer to that new object within 
+            the constructor function.
 
           Examples are written below.
 
