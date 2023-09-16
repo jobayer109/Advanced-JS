@@ -44,7 +44,69 @@
           * But, prototype (parent class) hasn't any prototype like "object's" 
             prototype is "Object", but "Object" has no prototype.
           * Examples are written below.
+         
+         
+        C. Inheritance in "class" function:
+        ------------------------------------------
+          * If we want use Parent class's data -> simply write "Child extends 
+            Parent".Thats it.
+          * To access the data of Parent class in Child class should use 'super()' 
+            method in the Child constructor.
+          * To access the data inside the constructor of Parent class, should pass 
+            that inside 'super()' method's parameter. Ex: super(color). This 'color' 
+            is the constructor data of Parent class. 
           
 */
 
 // ------------------------------------------------------------------------->>
+
+// Inheritance in "class" function.
+
+class Parent {
+  constructor(color) {
+    this.color = color;
+  }
+  draw() {
+    console.log("Drawing");
+  }
+}
+/*
+        class Parent extends Child {
+        constructor(color) {
+            super();
+            this.color = color;
+        }
+        draw() {
+            console.log("Drawing");
+        }
+        }
+        const result5 = new Parent("Red");
+        console.log(result5);
+
+ Notes: If want access data from Child to Parent class,
+ ---->  We can't access result5 like this way. 
+        Uncaught ReferenceError: Cannot access 'Child' before initialization
+*/
+
+class Child extends Parent {
+  constructor(color, height, width) {
+    super(color);
+    this.height = height;
+    this.width = width;
+  }
+
+  calculate() {
+    return this.height * this.width;
+  }
+}
+
+const result = new Child("Green", 5, 10);
+
+result.calculate(); // 50
+result.height; // 5
+
+result.color; // Green
+
+result.draw(); // Drawing.
+
+result; //Child {color: 'Green', height: 5, width: 10}
