@@ -3,6 +3,7 @@
     -------
         A. Private data in "class" function.
         B. Ways to hide data.
+        C. use Getter Setter to access private data.
 
 
     Notes:
@@ -20,6 +21,15 @@
             1. Symbol. (Ex: const _draw = Symbol() and wrap the data with []) 
             2. WeakMap. (Ex: const _draw = new WeakMap() and to set the data write 
                in constructor like: _draw.set(this, draw) 
+       
+       
+        C. use 'Getter' 'Setter' to access private data:
+        ------------------------------------------------
+           * To 'get' private data by a method call -> simply write "get" keyword 
+             before the method in "class" function. (Ex: _height.get(this)) 
+           * To 'set' / update private data by a method call -> simply write "set" 
+             keyword before the method in "class" function. (Ex: _height.set(this, 
+             height)) 
 */
 
 //----------------------------------------------------------------------->>
@@ -65,6 +75,42 @@ class Shape {
 }
 
 const s1 = new Shape(10, 20);
-s1.print();
+// s1.print();
+
+//----------------------------------------------------------------------->>
+
+// C. use Getter Setter to access private data by method call.
+
+const _height1 = new WeakMap();
+const _width1 = new WeakMap();
+
+class Rectangle {
+  constructor(height1, width1) {
+    _height1.set(this, height1);
+    _width1.set(this, width1);
+  }
+
+  print() {
+    console.log("Rectangle drawing...");
+    console.log(_height1.get(this), _width1.get(this));
+  }
+  get height1() {
+    console.log(_height1.get(this));
+  }
+
+  /**
+   * @param {number} value
+   */
+  set width1(value) {
+    console.log(_width1.get(this)); // 10
+    console.log(_width1.set(this, value)); // WeakMap {Rectangle => 100}
+  }
+}
+
+const r1 = new Rectangle(5, 10);
+// r1.print();
+// r1.height1;
+// r1.width1 = 100;
+// r1.width1;
 
 //----------------------------------------------------------------------->>
