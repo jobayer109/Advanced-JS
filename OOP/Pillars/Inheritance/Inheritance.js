@@ -1,27 +1,55 @@
 /*
     Topics:
     ----------------------------------------
-        A. Prototype and Prototypical inheritance. (আদিরূপ)  
-        B. Multi level prototypes.
-        C. Property descriptor.
-        D. Constructor prototype (Ex: Array.prototype).
-        E. Instance vs Prototype Members 
-        F. Using Instance and Prototype Members 
+        A. Inheritance Definition
+        B. Prototype and Prototypical inheritance. (আদিরূপ)  
+        C. Multi level prototypes.
+        D. Property descriptor.
+        E. Constructor prototype (Ex: Array.prototype).
+        F. Instance vs Prototype Members 
+        G. Using Instance and Prototype Members 
 
 
     Notes:
     ------
-        A. Prototype and Prototypical inheritance:
+        A. Inheritance Definition:
+        ------------------------------------------
+          * Inheritance in JavaScript allows you to create reusable and structured 
+            code by defining shared behaviors in a prototype or class and then 
+            creating objects that inherit those behaviors. It's a key concept in 
+            building object-oriented JavaScript programs.
+
+          * Here's how inheritance works in JavaScript:
+              1. Prototype Chain: Every object in JavaScript has an associated 
+                 prototype object. When you access a property or method on an 
+                 object, JavaScript looks for that property or method on the object 
+                 itself. If it doesn't find it, it looks in the object's prototype, 
+                 and this process continues up the prototype chain until the 
+                 property or method is found or the chain ends with null.
+              2. Constructor Functions: Constructor functions are used to create 
+                 objects that share the same prototype. When you create an object 
+                 using a constructor function with the new keyword, the object 
+                 inherits properties and methods from the constructor function's 
+                 prototype.
+              3. Object.create(): Another way to set up inheritance in JavaScript is 
+                 to use the Object.create() method. It allows you to create a new 
+                 object with a specified prototype.
+              4. Class Syntax (ES6): With the introduction of ES6 (ECMAScript 2015), 
+                 JavaScript introduced a class syntax that makes it easier to work 
+                 with inheritance. Classes provide a more familiar and structured 
+                 way to define constructor functions and their prototypes.
+                
+        
+        B. Prototype and Prototypical inheritance:
         ------------------------------------------
           * Prototype means parent class.
           * In JS, every class has a prototype that means parent class.
           * But, prototype (parent class) hasn't any prototype like "object's" 
-            prototype 
-            is "Object", but "Object" has no prototype.
+            prototype is "Object", but "Object" has no prototype.
           * Examples are written below.
           
           
-        B. Multi level prototypes:
+        C. Multi level prototypes:
         ----------------------------------
           1. String prototype.
                 string -> String (constructor) -> Object. 
@@ -30,7 +58,7 @@
                 array -> Array (constructor) -> Object.  
 
 
-        C. Property descriptor:
+        D. Property descriptor:
         -----------------------
           * Object.defineProperty("object name", "property name", 
                 {
@@ -43,7 +71,7 @@
           Examples are written below.
 
 
-        D. Constructor prototype (Ex: Array.prototype):
+        E. Constructor prototype (Ex: Array.prototype):
         -----------------------------------------------
           * Every string, array, object are belong under a paren class (prototype).
           * If we expand the console.log of an array, we can see the created method 
@@ -56,19 +84,19 @@
           Examples are written below.
 
 
-        E. Instance vs Prototype Members:
+        F. Instance vs Prototype Members:
         --------------------------------
-          * Instance means own the body part of a function or object. It's called instance 
-            members.
+          * Instance means own the body part of a function or object. It's called 
+            instance members.
           * On execution process, JS engine firstly search the method in it's own 
             instance, Otherwise it moves to it's parent class; that means to it's 
             prototype. 
 
 
-        F. Using Instance and Prototype Members:
+        G. Using Instance and Prototype Members:
         ---------------------------------------
-          * We can call prototype functions from instance function. Similarly, instance 
-            function from prototype function scope.
+          * We can call prototype functions from instance function. Similarly, 
+            instance function from prototype function scope.
 
 */
 
@@ -110,7 +138,7 @@ true
 //
 //
 
-//  C. Property descriptor:
+//  D. Property descriptor:
 const person = {
   name: "Jobayer",
 };
@@ -177,7 +205,7 @@ Array.prototype.myMethod = function method() {
 
 // -----------------------------------------------------------------------------<<
 
-//  E. Instance vs Prototype Members in JS.
+//  F. Instance vs Prototype Members in JS.
 
 const Square = function (width) {
   // Instance members cell
