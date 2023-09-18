@@ -63,11 +63,11 @@ function foo(bar, getBar = () => bar) {
 // ------------------------------------------------------------------------->>
 
 // Same name isn't allow for variable and function:
-var num = 8;
+// var num = 8;
 
-function num() {
-  return 10;
-}
+// function num() {
+//   return 10;
+// }
 
 // console.log(num); // error.
 
