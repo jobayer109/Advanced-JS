@@ -53,6 +53,7 @@ xHttpReq.onreadystatechange = function (e) {
 
 // B. AJAX with callback function (Good practice)
 
+// Common callback function for all get request.
 const getRequest = function (url, callback) {
   const xhr = new XMLHttpRequest();
   xhr.open("get", url);
@@ -61,8 +62,6 @@ const getRequest = function (url, callback) {
     if (xhr.readyState === 4 && xhr.status === 200) {
       const response = JSON.parse(xhr.response);
       callback(null, response);
-    } else {
-      callback(xhr.status, null);
     }
   };
   xhr.send();
@@ -84,4 +83,23 @@ getRequest("https://jsonplaceholder.typicode.com/posts", (err, res) => {
   } else {
     // res.forEach((r) => console.log(r.title));
   }
+});
+
+//-------------------------------------------------------------------------->>
+
+// Always callback isn't asynchronous in JS.
+const arr = [1, 2, 3, 4, 5];
+
+// Normal mapping
+const qbArr = arr.map((v) => v * v * v); // Output: Sync result
+
+// Async mapping
+function asyncMap(arr, callback) {
+  return arr.map((v) => {
+    setTimeout(() => callback(v), 2000);
+  });
+}
+
+asyncMap(arr, (v) => {
+  console.log(v);
 });
