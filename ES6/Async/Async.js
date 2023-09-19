@@ -5,9 +5,9 @@
         B. Store data in variable using Async
 
 
-
-
 */
+
+// -------------------------------------------------------------------->>
 
 // console.log("The line number 1");
 
@@ -34,6 +34,6 @@ function storeResult(name) {
     console.log(name);
   }, 1000);
 }
-storeResult("Jobayer");
+// storeResult("Jobayer");
 
 // -------------------------------------------------------------------->>
