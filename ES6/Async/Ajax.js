@@ -85,6 +85,15 @@ getRequest("https://jsonplaceholder.typicode.com/posts", (err, res) => {
   }
 });
 
+// Get todo.
+getRequest(`https://jsonplaceholder.typicode.com/todos`, (err, res) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(res);
+  }
+});
+
 //-------------------------------------------------------------------------->>
 
 // Always callback isn't asynchronous in JS.
@@ -101,5 +110,7 @@ function asyncMap(arr, callback) {
 }
 
 asyncMap(arr, (v) => {
-  console.log(v);
+  // console.log(v);
 });
+
+//-------------------------------------------------------------------------->>
