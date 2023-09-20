@@ -7,7 +7,8 @@
         D. Simple fetch API call
         E. Delay function (custom)
         F. Instant "resolve" and "reject" Promise.
-        G. Promise.all()
+        G. Promise.all()  // Print all in an array until all tasks resolved.
+        H. Promise.race() // Only print the winner value of an array.
 
 
     Notes:
@@ -91,6 +92,7 @@ rejected.then(() => console.log("'then method doesn't work")).catch((value) => v
 //-------------------------------------------------------------------------->>
 
 // G.Promise.all()________________
+
 // Simple way_________________(Synchronous way)
 
 let pm1 = Promise.resolve("One");
@@ -104,19 +106,25 @@ Promise.all(allPromises).then((arr) => {
 
 //--------------------------------<
 
-// Simple way______________(Asynchronous way)
+// Critical way______________(Asynchronous way)
 
 let promise1 = new Promise((resolve) => {
-  setTimeout(resolve, 5000, "Promise_One");
+  setTimeout(resolve, 5000, "Promise 1");
 });
 let promise2 = new Promise((resolve) => {
-  setTimeout(resolve, 4000, "Promise_Two");
+  setTimeout(resolve, 4000, "Promise 2");
 });
 let promise3 = new Promise((resolve) => {
-  setTimeout(resolve, 3000, "Promise_Three");
+  setTimeout(resolve, 3000, "Promise 3");
 });
 
 const promiseAll = [promise1, promise2, promise3];
 Promise.all(promiseAll).then((arr) => arr);
+
+//-------------------------------------------------------------------------->>
+
+// H. Promise.race() // Only print the winner value of an array.
+const promiseAll2 = [promise1, promise2, promise3];
+Promise.race(promiseAll2).then((v) => console.log(v)); // Bcz, it took the fewest time in the operation
 
 //-------------------------------------------------------------------------->>
