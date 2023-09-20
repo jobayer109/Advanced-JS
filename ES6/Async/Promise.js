@@ -91,7 +91,7 @@ rejected.then(() => console.log("'then method doesn't work")).catch((value) => v
 //-------------------------------------------------------------------------->>
 
 // G.Promise.all()________________
-// Simple way_____________________
+// Simple way_________________(Synchronous way)
 
 let pm1 = Promise.resolve("One");
 let pm2 = Promise.resolve("Two");
@@ -101,5 +101,22 @@ const allPromises = [pm1, pm2, pm3];
 Promise.all(allPromises).then((arr) => {
   // console.log(arr);
 });
+
+//--------------------------------<
+
+// Simple way______________(Asynchronous way)
+
+let promise1 = new Promise((resolve) => {
+  setTimeout(resolve, 5000, "Promise_One");
+});
+let promise2 = new Promise((resolve) => {
+  setTimeout(resolve, 4000, "Promise_Two");
+});
+let promise3 = new Promise((resolve) => {
+  setTimeout(resolve, 3000, "Promise_Three");
+});
+
+const promiseAll = [promise1, promise2, promise3];
+Promise.all(promiseAll).then((arr) => arr);
 
 //-------------------------------------------------------------------------->>
