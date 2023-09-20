@@ -7,6 +7,7 @@
         D. Simple fetch API call
         E. Delay function (custom)
         F. Instant "resolve" and "reject" Promise.
+        G. Promise.all()
 
 
     Notes:
@@ -81,8 +82,24 @@ const delay = (sec) =>
 //  F. Instant "resolve" and "reject" Promise.
 // Resolved (instant)
 const resolved = Promise.resolve();
-resolved.then(() => console.log("Data resolved"));
+resolved.then(() => "Data resolved");
 
 // Rejected (instant)
 const rejected = Promise.reject("Data Rejected");
-rejected.then(() => console.log("'then method doesn't work")).catch((value) => console.log(value));
+rejected.then(() => console.log("'then method doesn't work")).catch((value) => value);
+
+//-------------------------------------------------------------------------->>
+
+// G.Promise.all()________________
+// Simple way_____________________
+
+let pm1 = Promise.resolve("One");
+let pm2 = Promise.resolve("Two");
+let pm3 = Promise.resolve("Three");
+
+const allPromises = [pm1, pm2, pm3];
+Promise.all(allPromises).then((arr) => {
+  // console.log(arr);
+});
+
+//-------------------------------------------------------------------------->>
