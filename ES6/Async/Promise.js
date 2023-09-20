@@ -143,4 +143,15 @@ async function asyncFunc() {
 
 asyncFunc();
 
+//............................
+
+// Promise.all() method  applied in async-await operation.
+const promises = [Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)];
+
+async function allPromises2() {
+  const result = await Promise.all(promises);
+  console.log(result);
+}
+// allPromises2();
+
 //-------------------------------------------------------------------------->>
