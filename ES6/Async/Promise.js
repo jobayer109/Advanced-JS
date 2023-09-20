@@ -75,3 +75,14 @@ const delay = (sec) =>
 // delay(5000).then(() => console.log("Print after 5 seconds"));
 // delay(4000).then(() => console.log("Print after 4 seconds"));
 // delay(1000).then(() => console.log("Print after 1 seconds"));
+
+//-------------------------------------------------------------------------->>
+
+//  F. Instant "resolve" and "reject" Promise.
+// Resolved (instant)
+const resolved = Promise.resolve();
+resolved.then(() => console.log("Data resolved"));
+
+// Rejected (instant)
+const rejected = Promise.reject("Data Rejected");
+rejected.then(() => console.log("'then method doesn't work")).catch((value) => console.log(value));
