@@ -9,6 +9,7 @@
         F. Instant "resolve" and "reject" Promise.
         G. Promise.all()  // Print all in an array until all tasks resolved.
         H. Promise.race() // Only print the winner value of an array.
+        I. Async-await operation (special)
 
 
     Notes:
@@ -125,6 +126,21 @@ Promise.all(promiseAll).then((arr) => arr);
 
 // H. Promise.race() // Only print the winner value of an array.
 const promiseAll2 = [promise1, promise2, promise3];
-Promise.race(promiseAll2).then((v) => console.log(v)); // Bcz, it took the fewest time in the operation
+Promise.race(promiseAll2).then((v) => console.log()); // Bcz, it took the fewest time in the operation
+
+//-------------------------------------------------------------------------->>
+
+// I. Async-await operation (special)
+async function asyncFunc() {
+  try {
+    const res = await fetch(`${Base_url}/users`);
+    const data = await res.json();
+    data.map((u) => console.log());
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+asyncFunc();
 
 //-------------------------------------------------------------------------->>
