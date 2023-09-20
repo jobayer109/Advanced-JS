@@ -4,7 +4,10 @@
         A. What is promise?
         B. Simple promise.
         C. Better promise exploration.
-        D. Fetch API call
+        D. Simple fetch API call
+        E. Delay function (custom)
+        F. Instant "resolve" and "reject" Promise.
+
 
     Notes:
     ------
@@ -48,12 +51,27 @@ getIphone(true)
 //-------------------------------------------------------------------------->>
 
 // D. Simple fetch API call and get single user
-const res = fetch(`${Base_url}/users/1`)
+const response = fetch(`${Base_url}/users/3`)
   .then((res) => {
     res.json().then((data) => {
-      console.log(data);
+      //   console.log(data.email); // Get all data of a user.
     });
   })
   .catch((e) => {
     console.log(e.message);
   });
+
+//-------------------------------------------------------------------------->>
+
+// E. Delay function (custom)
+
+const delay = (sec) =>
+  new Promise((resolve) => {
+    setTimeout(resolve, sec);
+  });
+
+// delay(3000).then(() => console.log("Print after 3 seconds"));
+// delay(2000).then(() => console.log("Print after 2 seconds"));
+// delay(5000).then(() => console.log("Print after 5 seconds"));
+// delay(4000).then(() => console.log("Print after 4 seconds"));
+// delay(1000).then(() => console.log("Print after 1 seconds"));
