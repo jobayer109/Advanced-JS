@@ -3,7 +3,8 @@
     -------
         A. What is promise?
         B. Simple promise.
-        C. Better promise exploration
+        C. Better promise exploration.
+        D. Fetch API call
 
     Notes:
     ------
@@ -13,6 +14,8 @@
 */
 
 //-------------------------------------------------------------------------->>
+
+const Base_url = "https://jsonplaceholder.typicode.com";
 
 // B. Simple promise____________
 let p1 = new Promise((resolve, reject) => {
@@ -43,3 +46,14 @@ getIphone(true)
   });
 
 //-------------------------------------------------------------------------->>
+
+// D. Simple fetch API call and get single user
+const res = fetch(`${Base_url}/users/1`)
+  .then((res) => {
+    res.json().then((data) => {
+      console.log(data);
+    });
+  })
+  .catch((e) => {
+    console.log(e.message);
+  });
