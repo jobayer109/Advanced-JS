@@ -34,10 +34,12 @@ function getIphone(isPassed) {
     }, 2000);
   });
 }
-getIphone(false)
+getIphone(true)
   .then((result) => {
-    console.log(result);
+    // console.log(result);
   })
   .catch((e) => {
     console.log(e.message);
   });
+
+//-------------------------------------------------------------------------->>

@@ -3,6 +3,7 @@
     -------
         A. Simple AJAX
         B. AJAX with callback function.(Bad & Good practice)
+        C. Make common getFunction with the help of "Promise".
 
 
 
@@ -18,7 +19,7 @@
 
 // A. Simple AJAX
 
-function loadData() {
+function loadres() {
   const xtr = new XMLHttpRequest();
 
   xtr.onload = () => {
@@ -31,7 +32,7 @@ function loadData() {
   xtr.send();
 }
 
-// loadData();
+// loadres();
 
 //-------------------------------------------------------------------------->>
 
@@ -114,3 +115,40 @@ asyncMap(arr, (v) => {
 });
 
 //-------------------------------------------------------------------------->>
+
+// C. Make common getFunction with the help of "Promise".
+
+const Base_URL = "https://jsonplaceholder.typicode.com";
+
+function getFunction(url) {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("get", url);
+    xhr.onload = function (e) {
+      xhr.readyState === 4 && xhr.status === 200
+        ? resolve(xhr.response)
+        : reject(new Error("Error occurred"));
+    };
+    xhr.send();
+  });
+}
+
+// Get single user
+getFunction(`${Base_URL}/users/1`)
+  .then((res) => {
+    let data = JSON.parse(res);
+    // console.log(data.name);
+  })
+  .catch((e) => {
+    console.log(e.message);
+  });
+
+// Get All users
+getFunction(`${Base_URL}/users`)
+  .then((res) => {
+    let data = JSON.parse(res);
+    // console.log(data);
+  })
+  .catch((e) => {
+    console.log(e.message);
+  });
