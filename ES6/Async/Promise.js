@@ -155,3 +155,17 @@ async function allPromises2() {
 // allPromises2();
 
 //-------------------------------------------------------------------------->>
+
+// Promise explored in previous way .then way
+
+function fetchData() {
+  const res = fetch("https://jsonplaceholder.typicode.com/users");
+  res.then((data) => {
+    data.json().then((v) => {
+      console.log(v);
+    });
+  });
+}
+// fetchData();
+
+//-------------------------------------------------------------------------->>
