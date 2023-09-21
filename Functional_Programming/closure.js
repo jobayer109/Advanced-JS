@@ -12,8 +12,8 @@
         * Closure is when a function is able to remember and access it's lexical 
           scope, Even when that function executing outside it's lexical scope.
 
-    * ---->> Able to remember and access it's lexical scope.
-    * ---->> Function executing outside it's lexical scope.
+          ---->> Able to remember and access it's lexical scope.
+          ---->> Function executing outside it's lexical scope.
 
 
         * Jodi kono scope a baire theke data ase take closure bole.
@@ -26,9 +26,12 @@
 
       Blogs Notes:
       ---------------------
-        * Closures are commonly used to create private variables and encapsulation in JavaScript.
-        * This allows you to achieve information hiding and avoid global namespace pollution.
-        * Closures are often used in scenarios such as event handlers, callbacks, and maintaining state in functional programming. 
+        * Closures are commonly used to create private variables and encapsulation 
+          in JavaScript.
+        * This allows you to achieve information hiding and avoid global namespace 
+          pollution.
+        * Closures are often used in scenarios such as event handlers, callbacks, 
+          and maintaining state in functional programming. 
        
 */
 

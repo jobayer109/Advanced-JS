@@ -13,8 +13,8 @@
             * Write (...rest) operator at the last of all parameters 
               Example: (name, msg, ...rest).
             * Previously, we use arguments keyword. but it's not a array. 
-            * But when we use Rest (...rest) operator, it will convert all arguments 
-              to an array. And we can apply all array method like others.
+            * But when we use Rest (...rest) operator, it will convert all 
+            * arguments to an array. And we can apply all array method like others.
            
            
         B. Spread operator:

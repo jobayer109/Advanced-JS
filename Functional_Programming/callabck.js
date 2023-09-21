@@ -1,7 +1,7 @@
 /*
    Topics:
         1. Bad practice and code duplication.
-        2. Callback function best practice.
+        2. Callback function and best practice.
 */
 
 // ----------------------------------------------------------------------------------->>
@@ -13,8 +13,7 @@ function sample(a, b) {
   let d = a - b;
 
   let result = (c, d);
-  // this code is fixed for only one function 'c()'. If I want to subtraction,        multiply, division, modulus; I have to declare same code for different different function which create code duplication. This is bad practice.
-
+  // this code is fixed for only one function 'c()'. If I want to subtraction,   multiply, division, modulus; I have to declare same code for different different function which create code duplication. This is bad practice.
   return result;
 }
 
