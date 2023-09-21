@@ -35,11 +35,25 @@ const asyncIterable = {
 const iterable = asyncIterable[Symbol.asyncIterator]();
 
 // Create Async iterator using IIFEs
+// But it's not production standard. We can use "for await of" loop in the async function
 (async function () {
-  console.log(await iterable.next()); // {value: 1, done: false}
-  console.log(await iterable.next()); // {value: 2, done: false}
-  console.log(await iterable.next()); // {value: 3, done: false}
-  console.log(await iterable.next()); // {value: 4, done: false}
-  console.log(await iterable.next()); // {value: 5, done: false}
-  console.log(await iterable.next()); // {done: true}
+  // To see output use console.log()
+  await iterable.next(); // {value: 1, done: false}
+  await iterable.next(); // {value: 2, done: false}
+  await iterable.next(); // {value: 3, done: false}
+  await iterable.next(); // {value: 4, done: false}
+  await iterable.next(); // {value: 5, done: false}
+  await iterable.next(); // {done: true}
 })();
+
+//..................................
+
+// For of loop in async Iterator using IIFEs
+
+(async function () {
+  for await (let value of asyncIterable) {
+    value; // Succeed
+  }
+})();
+
+// -------------------------------------------------------------------->>
