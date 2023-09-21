@@ -2,7 +2,7 @@
     Topics:
     -------
         A. What is Iterator ? 
-        B. 
+        B. Its a advanced topic
 
     Notes:
     ------
