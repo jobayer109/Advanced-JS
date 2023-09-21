@@ -14,6 +14,10 @@
             * querySelector shows the 'NodeList'. Kinds of nodes can be anything 
               like "Elements, TagNames, Text, Attributes, names etc"
             * querySelector is more powerful than getElementBySomething 
+           
+        3. DOM Traverse.
+            * Simple way
+            * Smart way (Loop)
 */
 //----------------------------------------------------------------->>
 // Get element Selectors
@@ -51,3 +55,10 @@ ul.children; // HTMLCollection(3)
 ul.childNodes; // NodeList(7)
 
 //----------------------------------------------------------------->>
+
+// 3. DOM Traverse_________( Simple way)
+const list = document.getElementById("list");
+list.parentElement; // section.container
+list.children; // HTMLCollection(3)
+list.firstElementChild; // list_one
+list.lastElementChild; // list_three
