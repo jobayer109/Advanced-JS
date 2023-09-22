@@ -4,6 +4,7 @@
     A. Create Element
     B. Update Element
     C. Remove Element
+    D. Clone a Node (cloneNode)
 */
 
 //------------------------------------------------------------------->>
@@ -42,9 +43,19 @@ setTimeout(() => {
 }, 3000);
 
 //------------------------------------------------------------------->>
+
 // C. Remove Element
 const lastChildOfList = list.lastElementChild;
 
-setTimeout(() => {
-  lastChildOfList.remove();
-}, 2000);
+// setTimeout(() => {
+//   lastChildOfList.remove();
+// }, 2000);
+
+//------------------------------------------------------------------->>
+
+// D. Deep Clone a Node with (cloneNode) method
+const lastChild = list.lastElementChild.cloneNode(true);
+lastChild.innerHTML = "Line Five";
+list.appendChild(lastChild);
+
+// console.log(lastChild);
