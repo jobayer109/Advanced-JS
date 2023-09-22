@@ -42,3 +42,9 @@ setTimeout(() => {
 }, 3000);
 
 //------------------------------------------------------------------->>
+// C. Remove Element
+const lastChildOfList = list.lastElementChild;
+
+setTimeout(() => {
+  lastChildOfList.remove();
+}, 2000);
