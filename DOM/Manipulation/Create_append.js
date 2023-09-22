@@ -7,7 +7,7 @@
 
 
   Notes:
-  ---------------
+  --------------
     C. Explore "document.insertAdjacentElement" for proper positioning:
     -------------------------------------------------------------------
         We handle proper position of an Element in 4 ways:
@@ -63,4 +63,4 @@ ul.insertAdjacentElement("afterBegin", div);
 ul.insertAdjacentElement("afterEnd", div);
 ul.insertAdjacentElement("afterBegin", div);
 
-console.log(div);
+// console.log(div);
