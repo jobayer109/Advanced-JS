@@ -1,3 +1,25 @@
+/*
+  Topics:
+  --------------  
+    A. Create Element with "createElement" function.
+    B. Append Element with "append" function.
+    C. Explore "document.insertAdjacentElement" for proper positioning.
+
+
+  Notes:
+  ---------------
+    C. Explore "document.insertAdjacentElement" for proper positioning:
+    -------------------------------------------------------------------
+        We handle proper position of an Element in 4 ways:
+          1. beforeBegin
+          2. beforeEnd
+          3. afterBegin
+          4. afterEnd
+
+*/
+
+//------------------------------------------------------------------->>
+
 // Create Element Function
 function createElement(tagName, className, innerHTML) {
   const tag = document.createElement(tagName);
@@ -33,5 +55,12 @@ const p2 = createElement(
 // Create 'div' and append to the container section.
 const div = createElement("div");
 append(div, [p1, p2]);
-console.log(div);
 document.getElementsByClassName("container")[0].appendChild(div);
+
+// C. Explore "document.insertAdjacentElement" for proper positioning:
+ul.insertAdjacentElement("beforeBegin", div);
+ul.insertAdjacentElement("afterBegin", div);
+ul.insertAdjacentElement("afterEnd", div);
+ul.insertAdjacentElement("afterBegin", div);
+
+console.log(div);
