@@ -4,19 +4,19 @@
     A. Click event
     B. Mouse hover event
     C. Remove a list from the list-group (Delegation problem)
-    D. Event Delegation problem solution
+    D. Event Delegation problem solution.
+    E. Input form handle with Event handler.
+    F. Input data store in an Array.
 
 
   Notes:
-  ---------------
+  ------------------------
     A. Click event:
     ----------------------
         *
     B. Mouse hover event:
     ----------------------
         *
-
-
 */
 
 //------------------------------------------------------------------->>
@@ -74,3 +74,34 @@ list.addEventListener("click", function (e) {
     e.target.remove();
   }
 });
+
+//------------------------------------------------------------------->>
+
+// E. Input form handle with Event handler.
+const name = document.getElementById("name");
+
+name.addEventListener("keypress", function (e) {
+  let values = []; // Have to explore
+  if (e.key === "Enter") {
+    document.getElementById("nameShow").innerHTML = e.target.value;
+    e.target.value = "";
+  }
+});
+
+//------------------------------------------------------------------->>
+
+// F. Input data store in an Array.
+let formArray = [];
+function addToArray() {
+  const nameInput = document.querySelector('input[name="name"]');
+  const nameValue = nameInput.value;
+  console.log(nameValue);
+
+  const valueObj = { nameValue };
+
+  formArray.push(valueObj);
+  console.log(formArray);
+}
+// addToArray();
+
+//------------------------------------------------------------------->>
