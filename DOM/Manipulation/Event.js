@@ -7,6 +7,7 @@
     D. Event Delegation problem solution.
     E. Input form handle with Event handler.
     F. Input data store in an Array.
+    G. Check box handling and store data in an array.
 
 
   Notes:
@@ -105,3 +106,15 @@ function addToArray() {
 // addToArray();
 
 //------------------------------------------------------------------->>
+
+// G. Check box handle and store data in an array.
+const skills = document.getElementsByName("skills");
+
+const skillsArray = [];
+[...skills].forEach((skill) => {
+  skill.addEventListener("change", function (e) {
+    if (e.target.checked) {
+      skillsArray.push(e.target.value);
+    }
+  });
+});
