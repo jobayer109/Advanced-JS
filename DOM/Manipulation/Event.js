@@ -3,8 +3,8 @@
   --------------  
     A. Click event
     B. Mouse hover event
-    C. 
-    D. 
+    C. Remove a list from the list-group (Delegation problem)
+    D. Event Delegation problem solution
 
 
   Notes:
@@ -29,6 +29,10 @@ btn.addEventListener("click", function (e) {
   const lastChild = list.lastElementChild.cloneNode(true);
   lastChild.innerHTML = "Newly added";
   list.appendChild(lastChild);
+
+  // if (this.contains === false) {
+  //   list.innerHTML = "Empty";
+  // }
 });
 
 //------------------------------------------------------------------->>
@@ -51,3 +55,22 @@ box.addEventListener("mousemove", function (e) {
 });
 
 //------------------------------------------------------------------->>
+
+// C. Remove a list from the list-group (Delegation problem)
+// Delegation problem (I this way we can only delete that element are previously added in the HTML document. But, we can't the list that we newly added to the list. This is 'Event Delegation problem')
+
+// [...list.children].forEach((li) => {
+//   li.onclick = function (e) {
+//     e.target.remove();
+//   };
+// });
+
+// --------------------------<<
+
+// D. Event Delegation problem solution___________________
+
+list.addEventListener("click", function (e) {
+  if (this.contains(e.target)) {
+    e.target.remove();
+  }
+});
