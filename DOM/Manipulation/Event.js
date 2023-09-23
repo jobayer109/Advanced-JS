@@ -128,7 +128,31 @@ const skillsArray = [];
 function appendSkills(parent, skills) {
   let result = "";
   skills.forEach((skill) => {
-    result += `, ${skill}`;
+    result += ` ${skill}, `;
   });
   parent.innerHTML = result;
 }
+
+// Re-practice the previous code actions
+
+// let array = [];
+// [...skills].forEach((skill) => {
+//   skill.addEventListener("change", function (e) {
+//     if (e.target.checked) {
+//       array.push(e.target.value);
+//       setSkills(result, array);
+//     } else {
+//       let index = array.indexOf(e.target.value);
+//       array.splice(index, 1);
+//       setSkills(result, array);
+//     }
+//   });
+// });
+
+// function setSkills(parent, skills) {
+//   let result = "";
+//   skills.forEach((skill) => {
+//     result += ` ${skill}, `;
+//     parent.innerHTML = result;
+//   });
+// }
