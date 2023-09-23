@@ -109,12 +109,26 @@ function addToArray() {
 
 // G. Check box handle and store data in an array.
 const skills = document.getElementsByName("skills");
+const result = document.getElementById("result");
 
 const skillsArray = [];
 [...skills].forEach((skill) => {
   skill.addEventListener("change", function (e) {
     if (e.target.checked) {
       skillsArray.push(e.target.value);
+      appendSkills(result, skillsArray);
+    } else {
+      let index = skillsArray.indexOf(e.target.value);
+      skillsArray.splice(index, 1);
+      appendSkills(result, skillsArray);
     }
   });
 });
+
+function appendSkills(parent, skills) {
+  let result = "";
+  skills.forEach((skill) => {
+    result += `, ${skill}`;
+  });
+  parent.innerHTML = result;
+}
