@@ -151,6 +151,28 @@ function appendSkills(parent, skills) {
 //------------------------------------------------------------------->>
 
 // H. Double click on the list and edit the innerText.
-list.addEventListener("dblclick", function (event) {
-  console.log("Double click");
+
+const listGroup = document.getElementById("listGroup");
+listGroup.addEventListener("dblclick", function (event) {
+  if (this.contains(event.target)) {
+    let innerText = event.target.innerText;
+    event.target.innerText = "";
+    const inputBox = inputTexBox(innerText);
+    event.target.appendChild(inputBox);
+
+    inputBox.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+        event.target.innerHTML = e.target.value;
+      }
+    });
+  }
 });
+
+function inputTexBox(value) {
+  const inp = document.createElement("input");
+  inp.type = "text";
+  inp.className = "form-control";
+  inp.value = value;
+
+  return inp;
+}
