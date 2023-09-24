@@ -15,15 +15,16 @@
                 to Server</span>
         </h1>
         <!-- Form -->
-        <form id="form">
+        <form id="post-form">
             <label for="exampleFormControlInput1" class="form-label fs-5 fw-bold">Please Fill the form</label>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Provide a title here</label>
-                <input type="text" id="name" name="name" class="form-control" placeholder="Enter title">
+                <input type="text" id="name" name="title" class="form-control" placeholder="Enter title">
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Write a beautiful description here</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label class="form-label">Write a beautiful description
+                    here</label>
+                <textarea class="form-control" name="body" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             <div>
                 <button type="submit" id="btn" class="btn btn-success mt-3 fw-semibold">Send Form Data to
