@@ -1,23 +1,14 @@
 /*
-  Topics:
-  --------------  
-    A. Click event
-    B. Mouse hover event
-    C. Remove a list from the list-group (Delegation problem)
-    D. Event Delegation problem solution.
-    E. Input form handle with Event handler.
-    F. Input data store in an Array.
-    G. Check box handling and store data in an array.
-
-
-  Notes:
-  ------------------------
-    A. Click event:
-    ----------------------
-        *
-    B. Mouse hover event:
-    ----------------------
-        *
+    Topics:
+    --------------  
+      A. Click event
+      B. Mouse hover event
+      C. Remove a list from the list-group (Delegation problem)
+      D. Event Delegation problem solution.
+      E. Input form handle with Event handler.
+      F. Input data store in an Array.
+      G. Check box handling and store data in an array.
+      H. Double click on the list and edit the innerText.
 */
 
 //------------------------------------------------------------------->>
@@ -156,3 +147,10 @@ function appendSkills(parent, skills) {
 //     parent.innerHTML = result;
 //   });
 // }
+
+//------------------------------------------------------------------->>
+
+// H. Double click on the list and edit the innerText.
+list.addEventListener("dblclick", function (event) {
+  console.log("Double click");
+});

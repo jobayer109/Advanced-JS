@@ -15,20 +15,29 @@
     </h1>
 
     <!-- List group -->
-    <ul class="list-group" id="list">
+    <ul class="list-group mt-5" id="list">
       <li class="list-group-item" id="line_one">Line One</li>
       <li class="list-group-item">Line Two</li>
       <li class="list-group-item">Line Three</li>
     </ul>
 
     <!-- Add more button -->
-    <div class="d-grid  col-6 mx-auto my-3">
+    <div class="d-grid col-6 mx-auto my-3">
       <button class="btn btn-success fw-bold" id="btn" type="button">Add More</button>
     </div>
 
+    <!-- ANother list group -->
+    <label class="form-label mt-3 fs-5 fw-bold text-primary">Double click here and Edit</label>
+    <ul class="list-group mb-5" id="list">
+      <li class="list-group-item" id="line_one">Edit me - One</li>
+      <li class="list-group-item">Edit me - Two</li>
+      <li class="list-group-item">Edit me - Three</li>
+    </ul>
+
+
     <!-- Form control -->
     <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Enter name</label>
+      <label class="form-label mt-3 fs-5 fw-bold text-primary">Enter your name</label>
       <input type="text" class="form-control" id="name" name="name" placeholder="Type your name">
 
       <div class="mt-1"> Output: <span id="nameShow"></span></div>
@@ -36,7 +45,7 @@
 
 
     <!-- Check box -->
-    <div><label class="form-label mt-3 fs-5 fw-bold">Choose your skills</label>
+    <div><label class="form-label mt-3 fs-5 fw-bold text-primary">Choose your skills</label>
       <div class="form-check">
         <input class="form-check-input" type="checkbox" name="skills" value="Java" id="flexCheckDefault">
         <label class="form-check-label" for="flexCheckDefault">
@@ -69,8 +78,8 @@
 
     <!-- Canvas scaling Box  -->
     <div class="box my-5 fw-bold fs-5" id="box"
-      style="background-color:#ecae83; height: 150px; padding-bottom: 20px; padding-left: 5px;">
-      <p>
+      style="background-color:#892e08; height: 150px; padding-bottom: 20px; padding-left: 5px;">
+      <p class="text-white">
         [ <span id="x-value">0</span> : <span id="y-value">0</span> ]
       </p>
     </div>
