@@ -1,3 +1,8 @@
+/*
+    Variable helps us to make things dynamic. (Main concept)
+
+*/
+
 const names = ["Jobayer", "Taima", "Tahmi", "Rayhan", "Mostofa"];
 
 let index = -1;
