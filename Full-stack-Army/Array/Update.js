@@ -11,12 +11,18 @@ const arr = [
   { id: 4, value: 40 },
 ];
 
+//-----------------------------------------------
+
+//  finIndex method apply
 // const index = arr.findIndex((v) => {
 //   return v.id === 2;
 // });
 // arr[1].value = 500;
 // console.log(arr);
 
+// ------------------------------------------------
+
+// find() method apply
 const obj = arr.find((v) => {
   return v.id === 4;
 });
@@ -26,6 +32,9 @@ obj.value = 400;
 
 arr[3] === obj; // true
 
+// ----------------------------------------------
+
+// Object comparison
 const a = {};
 const b = {};
 
