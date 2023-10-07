@@ -76,10 +76,20 @@ students[targetID] = {
 
 // ------------------------------------------------------------------
 // Delete -> O(1)
-delete students["597d4662-4f91-4225-b65d-5bc09c95c0bc"];
+// delete students["597d4662-4f91-4225-b65d-5bc09c95c0bc"];
 
 // ------------------------------------------------------------------
 // Get an object if I have the ID.
-console.log(students["fa30d7de-7164-41c1-9274-6470da058458"]);
+students["fa30d7de-7164-41c1-9274-6470da058458"]; // console it
+
+// ------------------------------------------------------------------
+// Object Traverse -> [find, filter, map, forEach etc as like array]
+Object.values(students).forEach((student) => {
+  const { id, name, email } = student;
+  student; // Print all individual object
+  id, name, email; // Print student's particular data
+});
+
+// ------------------------------------------------------------------
 // Parent object print
 console.log("Parent Object:", students);
