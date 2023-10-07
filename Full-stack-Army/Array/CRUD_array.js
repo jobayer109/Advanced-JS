@@ -15,7 +15,8 @@
         - Delete
         - Update (medium)
         - Create a new one.
-            [ push -> easy O(1), unshift -> expensive task; O(n) ]
+            * push -> easy O(1), -> Less time complexity
+            * unshift -> expensive task; O(n) -> High time complexity
 
 */
 
@@ -50,7 +51,12 @@ const students = [
     email: "jara@gmail.com",
   },
 ];
-
-// Create an
+// ------------------------------------------------
+// Create a new one ----> push vs. unshift
+students.push({
+  id: randomUuid(),
+  name: "Jorina",
+  email: "jorna@gmail.com",
+});
 
 console.log(students);
