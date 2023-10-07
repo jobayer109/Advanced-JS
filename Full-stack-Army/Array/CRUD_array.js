@@ -51,6 +51,7 @@ const students = [
     email: "jara@gmail.com",
   },
 ];
+
 // ------------------------------------------------
 // Create a new one ----> push vs. unshift
 students.push({
@@ -58,5 +59,35 @@ students.push({
   name: "Jorina",
   email: "jorna@gmail.com",
 });
+
+// ------------------------------------------------
+// Update
+/*
+    * find() -> not perfect for re-assignment -> O(n)
+    * findIndex() -> perfect for res-assignment -> O(n) / O(1)
+
+
+*/
+const targetID = "597d4662-4f91-4225-b65d-5bc09c95c0bc";
+const updatedData = {
+  name: "Kala pakhi",
+  email: "kala@gmil.com", // experiment by commenting & uncommenting
+};
+
+// reassign using find() -> O(n)
+// let updatedObj = students.find((item) => item.id === targetID);
+// updatedObj = {
+//   id: targetID,
+//   ...updatedData,
+// };
+
+// reassign using findIndex() -> O(1)
+const updatedIndex = students.findIndex((item) => item.id === targetID);
+
+students[updatedIndex] = {
+  id: targetID,
+  ...students[updatedIndex], // keep prev data
+  ...updatedData, // push new data
+};
 
 console.log(students);
