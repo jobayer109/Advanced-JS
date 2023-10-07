@@ -91,7 +91,7 @@ students[updatedIndex] = {
   ...updatedData, // push new data
 };
 
-console.log("Previous", students);
+console.log("Updated", students);
 
 // ------------------------------------------------------------------
 // Delete
