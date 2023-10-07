@@ -1,3 +1,9 @@
+// Compiling__________________________________Result:
+/*
+    Array time: 73.246ms
+    Object time: 0.009ms
+*/
+
 const arr = [];
 const obj = {};
 
