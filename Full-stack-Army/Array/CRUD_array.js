@@ -12,14 +12,14 @@
     Advantage and disadvantage of using array
         - Easily Traverse
         - Filter
-        - Delete
-        - Update (medium)
+        - Delete -> [splice -> O(n), filter -> O(n)]
+        - Update -> (medium). [push -> O(n)]
         - Create a new one.
             * push -> easy O(1), -> Less time complexity
             * unshift -> expensive task; O(n) -> High time complexity
 
 */
-
+// ----------------------------------------------------------
 // Random uuid generate
 randomUuid = () => {
   return String("xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx").replace(
@@ -33,6 +33,7 @@ randomUuid = () => {
   );
 };
 
+// -----------------------------------------------------------
 // Create students array
 const students = [
   {
@@ -52,7 +53,7 @@ const students = [
   },
 ];
 
-// ------------------------------------------------
+// -----------------------------------------------------------------
 // Create a new one ----> push vs. unshift
 students.push({
   id: randomUuid(),
@@ -60,7 +61,7 @@ students.push({
   email: "jorna@gmail.com",
 });
 
-// ------------------------------------------------
+// ------------------------------------------------------------------
 // Update
 /*
     * find() -> not perfect for re-assignment -> O(n)
@@ -90,4 +91,9 @@ students[updatedIndex] = {
   ...updatedData, // push new data
 };
 
-console.log(students);
+console.log("Previous", students);
+
+// ------------------------------------------------------------------
+// Delete
+students.splice(updatedIndex, 1);
+console.log("Deleted", students);
