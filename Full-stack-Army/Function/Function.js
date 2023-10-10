@@ -11,6 +11,15 @@ const multiply = (a, b) => a * b;
 console.log(multiply(4, 5)); // Outputs 20
 
 // --------------------------------------------------------
+// Default Parameters:
+function greet(name = "Guest") {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet()); // Outputs "Hello, Guest!"
+console.log(greet("John")); // Outputs "Hello, John!"
+
+// --------------------------------------------------------
 // Function Expressions:
 const greet = function (name) {
   return `Hello, ${name}!`;
