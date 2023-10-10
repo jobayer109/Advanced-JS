@@ -28,6 +28,14 @@ const greet = function (name) {
 console.log(greet("John")); // Outputs "Hello, John!"
 
 // --------------------------------------------------------
+//Rest Parameters:
+function sum(...numbers) {
+  return numbers.reduce((acc, num) => acc + num, 0);
+}
+
+console.log(sum(1, 2, 3, 4, 5)); // Outputs 15
+
+// --------------------------------------------------------
 // Higher-Order Functions:
 function operate(num1, num2, operation) {
   return operation(num1, num2);
