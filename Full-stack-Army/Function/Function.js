@@ -36,6 +36,13 @@ function sum(...numbers) {
 console.log(sum(1, 2, 3, 4, 5)); // Outputs 15
 
 // --------------------------------------------------------
+// Spread Operator:
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combinedArray = [...arr1, ...arr2];
+console.log(combinedArray); // Outputs [1, 2, 3, 4, 5, 6]
+
+// --------------------------------------------------------
 // Higher-Order Functions:
 function operate(num1, num2, operation) {
   return operation(num1, num2);
