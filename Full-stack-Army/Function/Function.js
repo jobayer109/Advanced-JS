@@ -11,6 +11,14 @@ const multiply = (a, b) => a * b;
 console.log(multiply(4, 5)); // Outputs 20
 
 // --------------------------------------------------------
+// Function Expressions:
+const greet = function (name) {
+  return `Hello, ${name}!`;
+};
+
+console.log(greet("John")); // Outputs "Hello, John!"
+
+// --------------------------------------------------------
 // Higher-Order Functions:
 function operate(num1, num2, operation) {
   return operation(num1, num2);
