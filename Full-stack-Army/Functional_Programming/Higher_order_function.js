@@ -1,9 +1,8 @@
 /*
-   Topics:
+   Topic: Higher Order Function:  2 terms
    ------------------------
-         * Higher Order Function: 2 terms
-            - Function can be pass as an argument.
-            - Function can be return from another function.
+            1. Function can be pass as an argument.
+            2. Function can be return from another function.
 
          * Hidden concept:
             - Scope 
@@ -19,9 +18,12 @@
 */
 
 //-----------------------------------------------------------------
+
+// 1. Function can be pass as an argument___________________________
+
 /* 
    1. Bad: Imperative way to calculate random numbers.
-        This is a bad practice and after a long time if need to add more functionalities to calculate; it will create problem and break the DRY (Don't repeat yourself) rule.
+        This is a bad practice and after a long time if need to add more functionalities to calculate; it returned problem and break the DRY (Don't repeat yourself) rule.
 */
 
 function randomSum1(max) {
@@ -49,7 +51,7 @@ function randomSqrSum1(max) {
 
 /* 
    1. Good: Way to calculate random numbers.
-        This is a kind of good practice and after a long time if need to add more functionalities to calculate; it will create problem and break the DRY (Don't repeat yourself) rule also
+        This is a kind of good practice and after a long time if need to add more functionalities to calculate; it returned problem and break the DRY (Don't repeat yourself) rule also
 */
 
 function generateTwoRandomNum1(max) {
@@ -108,3 +110,25 @@ generateTwoRandomNum(10, (rand1, rand2) => rand1 - rand2);
 generateTwoRandomNum(10, (rand1, rand2) => rand1 * rand1 + rand2 * rand2);
 
 //-----------------------------------------------------------------
+//-----------------------------------------------------------------
+
+// 2. Function can be return from another function_________________
+
+function power(p) {
+  return function (n) {
+    let res = 1;
+    for (let i = 1; i <= p; i++) {
+      res *= n;
+    }
+    return res;
+  };
+}
+
+const sqr = power(2); // Here, returned a func named "sqr"
+const cube = power(3); // Here, returned a func named "cube"
+const power8 = power(8); // Here, returned a func named "power8"
+
+// Now we can calculate
+sqr(2); // 4
+cube(3); // 27
+power8(2); // 256
