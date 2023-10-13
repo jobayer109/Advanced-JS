@@ -14,6 +14,11 @@ const operations = [
     args: [20, 10],
     body: `console.log('a*b =', a*b)`,
   },
+  {
+    params: [],
+    args: [],
+    body: `console.log("Hello world"), console.log("No params and no args")`,
+  },
 ];
 
 operations.forEach((operation) => {
