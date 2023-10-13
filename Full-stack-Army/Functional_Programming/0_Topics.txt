@@ -2,7 +2,7 @@
 Topics of Functional Programming
     1. Pure function
     2. Higher order function
-    3. Function scope
+    3. Function scope (Lexical scope)
     4. Closure
     5. Hoisting
     6. Callback function

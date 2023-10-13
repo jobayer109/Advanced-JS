@@ -132,3 +132,6 @@ const power8 = power(8); // Here, returned a func named "power8"
 sqr(2); // 4
 cube(3); // 27
 power8(2); // 256
+
+// Different way to get output:
+power(3)(2); // 9
