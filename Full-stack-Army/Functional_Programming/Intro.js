@@ -1,36 +1,10 @@
 /*
-    What is functional programming?
-        - Function is first class citizen.
-        - We can treat function as value.
-
-
-    Benefits:
-    ---------
-        * We can store function in a variable.
-        * We can store function in an array or in an object.
-        * We can pass  a function as an argument.
-        * We can return a function from an another function.
+    Topics of Functional Programming
+        1. Pure function
+        2. Higher order function
+        3. Function scope
+        4. Closure
+        5. Hoisting
+        6. Callback function
+        7. Instant Invoked Functional Expression (IIFE)
  */
-
-// Prove:
-function testFunction() {
-  console.log("This is a function");
-}
-const fn = testFunction;
-fn();
-
-// In an array
-const arr = [fn, testFunction];
-arr[0]();
-
-// In an Object
-const obj = {
-  fn: testFunction,
-};
-obj.fn();
-
-// Return a function from an another function.
-function another() {
-  return fn;
-}
-console.log(another());
