@@ -34,6 +34,16 @@ basicGen.next(); // { value: undefined, done: true }
 // ------------------------------------------------------------------
 
 // B. Basic Generator (looping)
+function* range(start = 0, stop = 100, step = 5) {
+  for (let i = start; i <= stop; i += step) {
+    yield i;
+  }
+}
+const rangeIT = range();
+rangeIT.next(); // { value: 0, done: false }
+rangeIT.next(); // { value: 5, done: false }
+rangeIT.next(); // { value: 10, done: false }
+rangeIT.next(); // { value: 15, done: false }
 
 // ------------------------------------------------------------------
 
