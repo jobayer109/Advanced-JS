@@ -1,5 +1,20 @@
+/*
+    Topics:
+    ---------------------------------
+        A. Async Generator (simple)
+        B. Async Task (complex)
+
+    Notes:
+    ---------------------------------
+      * 
+
+*/
+
+// -------------------------------------------------------------------
+
 const axios = require("axios").default;
 
+// A. Async Generator (simple)
 async function getUsers() {
   const url = "https://jsonplaceholder.typicode.com/users";
   const { data: users } = await axios.get(url);
@@ -30,3 +45,23 @@ getUsers()
   .catch((e) => {
     console.log(e);
   });
+
+// -------------------------------------------------------------------
+
+// B. Async Task (complex)
+
+async function getUser() {
+  const url = "https://jsonplaceholder.typicode.com/users";
+  const { data: users } = await axios.get(url);
+
+  return users.map((user) =>
+    axios.get(`https://jsonplaceholder.typicode.com/posts?userId=${user.id}`)
+  );
+}
+
+(async () => {
+  const usersPromise = await getUser();
+  for await (let promise of usersPromise) {
+    console.log(promise.data.map((d) => d.title));
+  }
+})();
