@@ -3,7 +3,10 @@
     ---------------------------------
         A. Basic Generator (manual)
         B. Basic Generator (looping)
-        C. Real-life example of Generator
+        C. Real-life example of Generator (use case)
+            - In redux SAGA.
+            - Asynchronous operation
+            - ID generator
          
 
     Notes:
@@ -53,4 +56,27 @@ for (let value of range()) {
 
 // ------------------------------------------------------------------
 
-// C. Real-life example of Generator
+// C. Real-life example of Generator (ID Generator)
+function* generateID() {
+  let index = 1;
+  while (true) {
+    yield index++;
+  }
+}
+
+const userID = generateID();
+const productID = generateID();
+
+// Generate user ID
+"user:", userID.next().value; // 1
+"user:", userID.next().value; // 2
+"user:", userID.next().value; // 3
+
+// Generate product ID
+"productID:", productID.next().value; // 1
+"productID:", productID.next().value; // 2
+"productID:", productID.next().value; // 3
+"productID:", productID.next().value; // 4
+"productID:", productID.next().value; // 5
+
+// ------------------------------------------------------------------
