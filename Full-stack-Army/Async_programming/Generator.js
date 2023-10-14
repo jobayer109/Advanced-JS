@@ -45,6 +45,12 @@ rangeIT.next(); // { value: 5, done: false }
 rangeIT.next(); // { value: 10, done: false }
 rangeIT.next(); // { value: 15, done: false }
 
+for (let value of range()) {
+  // Using Generator range function became iterable.
+  // Should call the range function, otherwise throw not iterable error
+  // Finally it will work.
+}
+
 // ------------------------------------------------------------------
 
 // C. Real-life example of Generator
