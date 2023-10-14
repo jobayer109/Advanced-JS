@@ -2,8 +2,8 @@
     Topics:
     ---------------------------------
         A. Basic Iterator
-        B. Iterable
-        C. Iterate
+        B. Make an object Iterable
+        C. 
 
     Notes:
     ---------------------------------
@@ -26,18 +26,43 @@ function after() {
 }
 after(); // 1
 after(); // 2
+// We can do any task as need and then recall the iterator function.
 after(); // 3
 after(); // 4
 after(); // undefined
 
 // ------------------------------------------------------------------
-const obj = {
-  x: 10,
-  y: 15,
-  z: 56,
+
+// B. Make an object Iterable
+
+const range = {
+  start: 0,
+  stop: 100,
+  step: 10,
 };
 
-for (let key in obj) {
-  key; // x; y; z;
-  obj[key]; // 10; 15; 56;
+range[Symbol.iterator] = function () {
+  let current = this.start;
+  let stop = this.stop;
+  let step = this.step;
+  return {
+    next() {
+      const obj = {
+        value: current,
+        done: current > stop,
+      };
+      current += step;
+      return obj;
+    },
+  };
+};
+
+// const rangeIterator = range[Symbol.iterator]();
+// console.log(rangeIterator.next());
+// console.log(rangeIterator.next());
+// console.log(rangeIterator.next());
+
+// Now the 'range' object is iterable.
+for (let v of range) {
+  console.log(v);
 }
