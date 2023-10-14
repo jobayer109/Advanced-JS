@@ -18,9 +18,14 @@ async function* getPostByUser(users) {
 getUsers()
   .then(async (users) => {
     const userIterator = getPostByUser(users);
-    (await userIterator.next()).value; // userId: 1
-    (await userIterator.next()).value; // userId: 2
-    (await userIterator.next()).value; // userId: 3
+    // (await userIterator.next()).value; // userId: 1
+    // (await userIterator.next()).value; // userId: 2
+    // (await userIterator.next()).value; // userId: 3
+
+    // For-of loop
+    for await (let v of userIterator) {
+      v.map((d) => d.title);
+    }
   })
   .catch((e) => {
     console.log(e);
