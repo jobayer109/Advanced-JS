@@ -28,3 +28,38 @@ const asyncIterable = {
     console.log(value);
   }
 })();
+
+// ------------------------------------------------------------------
+
+// Define an async iterable for fetching data from a remote API
+const asyncIterable1 = {
+  [Symbol.asyncIterator]: async function* () {
+    let pageNumber = 1;
+    while (true) {
+      const response = await fetch(
+        `https://jsonplaceholder.typicode.com/posts?_page=${pageNumber}`
+      );
+      const data = await response.json();
+
+      if (data.length === 0) {
+        // If no more data is returned, end the iteration
+        return;
+      }
+
+      yield data;
+      pageNumber++;
+    }
+  },
+};
+
+// Consume the async iterable using an async loop
+(async function () {
+  let totalPosts = 0;
+
+  for await (const page of asyncIterable1) {
+    console.log(`Fetched ${page.length} posts`);
+    totalPosts += page.length;
+  }
+
+  console.log(`Total posts fetched: ${totalPosts}`);
+})();
